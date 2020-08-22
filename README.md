@@ -7,7 +7,9 @@ Key library for Python is Flask
 
 The guiding star for this project is ease of play but I suspect you're better off using a paper sheet
 
-What to do
+Version progression:
+
+
     Version 0.1
         1. Create a button that updates the healthpoints    DONE
             This would be done through the form thing and plain text edit
@@ -29,15 +31,15 @@ What to do
                 Can I have it as an argument in the webpage?
                 Try to have one page with a NEXT button that hides and shows previous content
                 NEXT adjusts a global variable to keep track of pages
-                1. Name and Appearance
+                i. Name and Appearance
                     Appearance would be radio buttons
-                2. Stats
+                ii. Stats
                     Explain that they have to allocate +2,0,0,-1
                     There needs to be an thing that stops them if they misallocate it
-                3. Bonds
+                iii. Bonds
                     Simple fields as an entry
-                4. Special move info
-                5. Equipment info
+                iv. Special move info
+                v. Equipment info
             There needs to be a thing that cancels this creation progress
                 This could be done by saving the file if and only if there has been a sufficient number of NEXTs
             One character, one file to avoid saving weirdness
