@@ -1,0 +1,124 @@
+<body onload="loadChar()">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+name <span id="name"></span>
+<br>
+brains <span id="brains"></span>
+<br>
+brawn <span id="brawn"></span>
+<br>
+beauty <span id="beauty"></span>
+<br>
+balance <span id="balance"></span>
+<br>
+beyond <span id="beyond"></span>
+<br>
+move <span id="move"></span>
+<br>
+equipment <span id="equipment"></span>
+<br>
+bonds <span id="bonds"></span>
+<br>
+appearance <span id="appearance"></span>
+<br>
+
+<br>
+<span id="health"></span>
+<button onclick="incrementHealth()">+1</button> 
+<button onclick="decrementHealth()">-1</button>
+<br>
+
+</body>
+
+<script>
+function loadChar() 
+{    
+        
+    let query = location.search.substring(1);
+    let xhr = new XMLHttpRequest(); 
+    let url = "characterLoad" + "?" + query; 
+    let data_parsed = ""
+    let listKeys = ""
+    
+    //document.getElementById('beyond').innerHTML = 5;
+    
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) { 
+            
+            data_parsed = JSON.parse(this.responseText);
+            //alert(data_parsed['name']);
+            
+            listKeys = Object.keys(data_parsed);
+            console.log(listKeys);
+            listKeys.forEach(function (item, index) {
+                console.log(item)
+                console.log(data_parsed[item]);
+                document.getElementById(item).innerHTML = data_parsed[item];
+            });
+            
+            
+            
+        } 
+    };
+        
+    
+    xhr.open("POST", url, true); 
+    xhr.setRequestHeader("Content-Type", "application/json"); 
+    xhr.send();
+    
+    
+    
+}
+
+function incrementHealth()
+{   
+    let query = location.search.substring(1);
+    let xhr = new XMLHttpRequest(); 
+    let url = "characterHealthInc" + "?" + query; 
+    let data_parsed = ""
+    let listKeys = ""
+    
+    
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) { 
+            
+            data_parsed = JSON.parse(this.responseText);
+            //alert(data_parsed['name']);
+            document.getElementById("health").innerHTML = data_parsed.health;  
+        } 
+    };
+        
+    
+    xhr.open("POST", url, true); 
+    xhr.setRequestHeader("Content-Type", "application/json"); 
+    xhr.send();
+
+    
+}
+
+function decrementHealth()
+{   
+    let query = location.search.substring(1);
+    let xhr = new XMLHttpRequest(); 
+    let url = "characterHealthDec" + "?" + query; 
+    let data_parsed = ""
+    let listKeys = ""
+    
+    
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) { 
+            
+            data_parsed = JSON.parse(this.responseText);
+            //alert(data_parsed['name']);
+            document.getElementById("health").innerHTML = data_parsed.health;  
+        } 
+    };
+        
+    
+    xhr.open("POST", url, true); 
+    xhr.setRequestHeader("Content-Type", "application/json"); 
+    xhr.send();
+
+    
+}
+</script>

@@ -1,0 +1,52 @@
+<body onload="loadLinks()">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+Select an existing character
+
+<a href="characterEx?char=captain" id="captain_link">Captain</a>
+<br>
+<a href="characterEx?char=boatswain" id="boatswain_link">Boatswain</a>
+<br>
+<a href="characterEx?char=mercenary" id="mercernary_link">Mercenary</a>
+<br>
+<br>
+Create a new one
+
+<a href="characterNew">New Character</a>
+
+
+</body>
+
+
+<script>
+function loadLinks() 
+{
+   
+    let links = ['captain_link','boatswain_link','mercernary_link'];
+    links.forEach(function (item, index) {
+                document.getElementById(item).style.display = "none";
+    });
+        
+    let xhr = new XMLHttpRequest(); 
+    let url = "characterHide"; 
+    let char_block = "";
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) { 
+            char_block = this.responseText;
+            listSplit = char_block.split(",");
+            listSplit.forEach(function (item, index) {
+                document.getElementById(item + "_link").style.display = "block";
+            });
+
+        } 
+    };
+        
+    
+    xhr.open("POST", url, true); 
+    xhr.setRequestHeader("myHeader", "123"); 
+    xhr.send();
+    
+    
+}
+</script>

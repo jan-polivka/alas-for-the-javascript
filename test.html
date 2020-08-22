@@ -1,0 +1,138 @@
+<body onload="loadHealth()">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+Test
+<br>
+This is a br test
+<p style="margin-left:2.5em">An example of a 5em left margin.</p>
+
+
+<!--<p>Take a look at <a href="json_demo" target="_blank">json_demo.txt</a></p>-->
+
+
+
+<br>
+<span id="healthField"></span>
+<button onclick="incrementHealth()">+1</button> 
+<br>
+<br>
+<input type="text" id="name" placeholder="Your name"> 
+<input type="text" id="health" placeholder="Enter Number"> 
+<button onclick="saveChar()">Save</button> 
+
+<br>
+<br>
+<a href="characterEx?char=captain" id="captain_link">Captain</a>
+<br>
+<a href="characterEx?char=boatswain" id="boatswain_link">Boatswain</a>
+<br>
+<a href="characterEx?char=mercenary" id="mercernary_link">Mercenary</a>
+
+</body>
+
+
+<script>
+function loadHealth() 
+{
+    document.getElementById("healthField").innerHTML = 0;
+    
+        
+    let links = ['captain_link','boatswain_link','mercernary_link'];
+    links.forEach(function (item, index) {
+                document.getElementById(item).style.display = "none";
+    });
+        
+    let xhr = new XMLHttpRequest(); 
+    let url = "characterHide"; 
+    let char_block = "";
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) { 
+            char_block = this.responseText;
+            listSplit = char_block.split(",");
+            listSplit.forEach(function (item, index) {
+                document.getElementById(item + "_link").style.display = "block";
+            });
+
+        } 
+    };
+        
+    
+    xhr.open("POST", url, true); 
+    xhr.setRequestHeader("myHeader", "123"); 
+    xhr.send();
+    
+    
+}
+</script>
+
+<script>
+function incrementHealth()
+{
+    
+    let xhr = new XMLHttpRequest(); 
+    let url = "character"; 
+    let data_parsed = "";
+    let data_select = JSON.stringify({"tar":0});
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) { 
+            
+            data_parsed = JSON.parse(this.responseText);
+            document.getElementById("healthField").innerHTML = data_parsed.health;
+            
+            
+
+        } 
+    };
+        
+    
+    xhr.open("POST", url, true); 
+    xhr.setRequestHeader("Content-Type", "application/json"); 
+    xhr.send(JSON.stringify({"tar":0})); 
+    
+
+    
+}
+</script>
+
+<script>
+function saveChar()
+{
+    //let resultY = document.querySelector('.result'); 
+    let name = document.querySelector('#name'); 
+    let brains = document.querySelector('#health'); 
+    //let name = document.querySelector('#name'); 
+    //let email = document.querySelector('#email'); 
+       
+    // Creating a XHR object 
+    let xhr = new XMLHttpRequest(); 
+    let url = "characterNewX"; 
+
+    // open a connection 
+    xhr.open("POST", url, true); 
+
+    // Set the request header i.e. which type of content you are sending 
+    xhr.setRequestHeader("Content-Type", "application/json"); 
+
+    // Create a state change callback 
+    
+    xhr.onreadystatechange = function () { 
+        if (xhr.readyState === 4 && xhr.status === 200) { 
+
+            // Print received data from server 
+            //result.innerHTML = this.responseText; 
+
+        } 
+    }; 
+
+    // Converting JSON data to string 
+    var data = JSON.stringify({ "name": name.value, "health": health.value }); 
+
+    // Sending data with the request 
+    xhr.send(data);
+}
+</script>
+
+
+
+
