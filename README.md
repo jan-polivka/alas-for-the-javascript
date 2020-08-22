@@ -3,7 +3,9 @@ Character management for Alas for the Awful Sea. I assume you could modify it fo
 
 Runs on Python 3 and JavaScript+HTML
 
-Key library for Python is Flask
+Key library for Python is Flask, which also means that I am using the virtual environment that you find more about in the their quickstart. Let me know, how this goes.
+
+Don't forget to change the IP address in the bat file. This can be found in ipconfig in cmd.exe.
 
 The guiding star for this project is ease of play but I suspect you're better off using a paper sheet
 
