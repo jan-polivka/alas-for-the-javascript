@@ -140,22 +140,27 @@ def characterHealthDec():
     
 @app.route('/characterNew')
 def characterNew():
-    with open('characterNew.html') as f:
-        read_data = f.read()
-    return read_data
+    char = request.args.get('char')
+    data = ""
+    with open("charsTemplates/" + char + ".html", 'r') as f:
+        data = f.read()
+    return data
     
 @app.route('/characterSave', methods=['POST'])
 def characterSave():
+    char = request.args.get('char')
     data = request.get_json()
-    print (data.get('name', ''))
-    data_loaded = ""
-    with open('json_demo.json', 'r') as json_file:
-        data_loaded = json.loads(json_file.read())
-        print (data)
-        print (data_loaded['character'])
-        data_loaded['character'].append(data)
-        
-    with open('json_demo.json', 'w') as json_file:
-        json.dump(data_loaded, json_file)
+           
+    with open("chars/" + char + ".json", 'w') as json_file:
+        json.dump(data, json_file)
     
     return ('', 200)
+    
+@app.route('/merc')
+def merc():
+    with open('charsTemplates\mercenary.html') as f:
+        read_data = f.read()
+    return read_data
+    
+#Create a template function for new character creation
+#Create a processing function for each file

@@ -1,0 +1,179 @@
+<body onload="loadSite()">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<a href="/">Go Home</a><br>
+
+<p id="nameAppearanceSec">
+
+      <label for="charName">Name</label>
+      <input type="text" id="charName" name="charName" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"><br>
+    
+
+
+    Appearance
+        <br>
+        <span style="margin-left:2.0em">
+        Gender<br>
+        </span>
+        <input type="radio" id="male" name="gender" value="male" style="margin-left:2.5em" onclick="genderSel(this.id)" autocomplete="off">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" onclick="genderSel(this.id)" autocomplete="off">
+        <label for="female">Female</label>
+        <input type="radio" id="nonbinary" name="gender" value="nonbinary" onclick="genderSel(this.id)" autocomplete="off">
+        <label for="nonbinary" >Nonbinary</label>
+        <br>
+        <br>
+        <input type="submit" value="Next" onclick="submitFunc()" id="genderButton">
+        
+        
+
+</p>
+
+<p id="statsSec">
+    Stats
+    <br>
+    <label for="brains">Brains:</label>
+    <input type="text" id="brains" name="brains" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"><br>
+    Brawn: +2 <br>
+    <label for="beauty">Beauty:</label>
+    <input type="text" id="beauty" name="beauty" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"><br>
+    <label for="balance">Balance:</label>
+    <input type="text" id="balance" name="balance" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"><br>
+    <label for="beyond">Beyond:</label>
+    <input type="text" id="beyond" name="beyond" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"><br>
+    <br>
+    <br>
+    <br>
+    <input type="submit" value="Next" onclick="submitFunc()" id="statsButton">
+    
+</p>
+
+<p id="bondsSec">
+        Bonds
+        <br>
+        <input type="text" id="bondOne" name="bondOne" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> is secretly paying you extra to do a few
+        private jobs for them.  
+        <br>
+        <br>
+        <input type="text" id="bondTwo" name="bondTwo" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> reminds you of your child, you wish them
+        to be safe.
+        <br>
+        <br>
+        <input type="text" id="bondThree" name="bondThree" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> has fought on your side before, you trust
+        them implicitly.
+        <br>
+        <br>
+        You think
+        <input type="text" id="bondFour" name="bondFour" autocomplete="off" onkeyup="extractText(this.value, this.id)"> is weak, so you bully them to get
+        your way.
+        <br>
+        <br>
+        <input type="submit" value="Next" onclick="submitFunc()" id="bondsButton">
+        
+        
+        
+</p>
+
+
+</body>
+
+<script>
+
+var section = 0;
+var sectionList = ["nameAppearanceSec", "statsSec", "bondsSec"];
+let attributesList = ['charName', 'gender', 'brains', 'brawn', 'beauty', 'balance', 'beyond', 'bondOne',
+                        'bondTwo', 'bondThree', 'bondFour'];
+                        
+let attributesDict = {'charName':'', 'gender':'', 'brains':0, 'brawn':+2, 'beauty':0, 'balance':0, 'beyond':0, 'bondOne':'',
+                        'bondTwo':'', 'bondThree':'', 'bondFour':'', 'health':4}
+let bondTestVar = "";
+
+function loadSite()
+{
+    window.localStorage.clear();
+    sectionList.forEach(function (item, index) {
+        if (item != "nameAppearanceSec")
+        {
+            document.getElementById(item).style.display = "none";
+        }
+    });
+
+}
+
+function submitFunc()
+{     
+    if (section >= sectionList.length - 1)
+    {
+        section = sectionList.length - 1;
+        sendData();
+    }
+    else
+    {
+        document.getElementById(sectionList[section]).style.display = "none";
+        section++;
+        document.getElementById(sectionList[section]).style.display = "block";
+    }
+    
+}
+
+function sendData()
+{
+    console.log("send");
+    attributesList.forEach(function (item, index) {
+        console.log(index);
+        console.log(attributesDict[item]);
+    });
+    
+    
+    console.log(attributesDict);
+    
+    let xhr = new XMLHttpRequest(); 
+    let url = "characterSave?char=mercenary"; //CHANGE
+
+    // open a connection 
+    xhr.open("POST", url, true); 
+
+    // Set the request header i.e. which type of content you are sending 
+    xhr.setRequestHeader("Content-Type", "application/json"); 
+
+    // Create a state change callback 
+    
+    xhr.onreadystatechange = function () { 
+        if (xhr.readyState === 4 && xhr.status === 200) { 
+
+            // Print received data from server 
+            //result.innerHTML = this.responseText; 
+
+        } 
+    }; 
+
+    console.log(attributesDict);
+    // Converting JSON data to string 
+    var data = JSON.stringify(attributesDict); 
+
+    // Sending data with the request 
+    xhr.send(data);
+    
+}
+
+function extractText(text, id)
+{
+    if (id == 'brains' || id == 'brawn' || id == 'beauty' || id == 'balance' || id == 'beyond')
+        attributesDict[id] = parseInt(text);
+    else
+        attributesDict[id] = text;
+}
+
+function genderSel(gender)
+{
+    if(gender == 'male')
+        attributesDict['gender'] = "Male";
+    else if(gender == 'female')
+        attributesDict['gender'] = "Female";
+    else if(gender == 'nonbinary')
+        attributesDict['gender'] = "Nonbinary";
+    else
+        console.log("all good");
+    
+}
+
+</script>

@@ -1,19 +1,33 @@
 <body onload="loadLinks()">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-Select an existing character
+<b>Select an existing character</b>
 
-<a href="characterEx?char=captain" id="captain_link">Captain</a>
-<br>
-<a href="characterEx?char=boatswain" id="boatswain_link">Boatswain</a>
-<br>
-<a href="characterEx?char=mercenary" id="mercernary_link">Mercenary</a>
-<br>
-<br>
-Create a new one
+<a href="characterEx?char=captain" id="captain_ex">Captain</a>
+<span id="captain_ex_text">Captain</span>
 
-<a href="characterNew">New Character</a>
+<a href="characterEx?char=boatswain" id="boatswain_ex">Boatswain</a>
+<span id="boatswain_ex_text">Boatswain</span>
+<a href="characterEx?char=mercenary" id="mercenary_ex">Mercenary</a>
+<span id="mercenary_ex_text">Mercenary</span>
+<a href="characterEx?char=merchant" id="merchant_ex">Merchant</a>
+<span id="merchant_ex_text">Merchant</span>
+<br>
+<br>
+<b>Create a new one</b>
+<br>
+<a href="characterNew?char=captain" id="captain_new">Captain</a>
+<span id="captain_new_text">Captain</span>
 
+<a href="characterNew?char=boatswain" id="boatswain_new">Boatswain</a>
+<span id="boatswain_new_text">Boatswain</span>
+
+<a href="characterNew?char=mercenary" id="mercenary_new">Mercenary</a>
+<span id="mercenary_new_text">Mercenary</span>
+<a href="characterNew?char=merchant" id="merchant_new">Merchant</a>
+<span id="merchant_new_text">Merchant</span>
+<br>
+<br>
 
 </body>
 
@@ -22,9 +36,10 @@ Create a new one
 function loadLinks() 
 {
    
-    let links = ['captain_link','boatswain_link','mercernary_link'];
+    let links = ['captain','boatswain','mercenary','merchant'];
     links.forEach(function (item, index) {
-                document.getElementById(item).style.display = "none";
+                document.getElementById(item + "_ex").style.display = "none";
+                document.getElementById(item + "_new_text").style.display = "none";
     });
         
     let xhr = new XMLHttpRequest(); 
@@ -36,7 +51,10 @@ function loadLinks()
             char_block = this.responseText;
             listSplit = char_block.split(",");
             listSplit.forEach(function (item, index) {
-                document.getElementById(item + "_link").style.display = "block";
+                document.getElementById(item + "_ex").style.display = "block";
+                document.getElementById(item + "_new").style.display = "none";
+                document.getElementById(item + "_ex_text").style.display = "none";
+                document.getElementById(item + "_new_text").style.display = "block";
             });
 
         } 
