@@ -1,1 +1,1 @@
-{"name": "Peter", "health": 3, "brains": 2, "brawn": 0, "beauty": 0, "balance": 2, "beyond": -1, "move": "You can do blah blah blah", "equipment": "Compass, big money", "bonds": "Someone stood up.Got eyes on X", "appearance": "Woman, cold eyes, built body"}
+{"charName": "qwe", "gender": "Nonbinary", "brains": 1, "brawn": 2, "beauty": 3, "balance": 2, "beyond": 4, "bondOne": "q", "bondTwo": "w", "bondThree": "e", "bondFour": "r", "health": 4}

@@ -54,7 +54,7 @@
 refused to obey a direct order
         <br>
         <br>
-        You’ve got your eye on
+        You've got your eye on
         <input type="text" id="bondTwo" name="bondTwo" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> for
         first mate, whether or not they agree
         <br>
@@ -105,6 +105,7 @@ function submitFunc()
     {
         section = sectionList.length - 1;
         sendData();
+        
     }
     else
     {
@@ -141,7 +142,8 @@ function sendData()
         if (xhr.readyState === 4 && xhr.status === 200) { 
 
             // Print received data from server 
-            //result.innerHTML = this.responseText; 
+            //result.innerHTML = this.responseText;
+            window.location.replace("characterEx?char=captain");            
 
         } 
     }; 
