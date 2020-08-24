@@ -28,29 +28,37 @@ Version progression:
             Link to New character creation
         
     Version 0.5
-        1. Improve the create a new character
-            Have 10 links, maybe do a table
+        1. Improve the create a new character               DONE    
+            Have X links, maybe do a table
                 Can I have it as an argument in the webpage?
                 Try to have one page with a NEXT button that hides and shows previous content
-                NEXT adjusts a global variable to keep track of pages
-                i. Name and Appearance
-                    Appearance would be radio buttons
-                ii. Stats
-                    Explain that they have to allocate +2,0,0,-1
-                    There needs to be an thing that stops them if they misallocate it
-                iii. Bonds
-                    Simple fields as an entry
-                iv. Special move info
-                v. Equipment info
-            There needs to be a thing that cancels this creation progress
+            There needs to be a thing that cancels it
                 This could be done by saving the file if and only if there has been a sufficient number of NEXTs
             One character, one file to avoid saving weirdness
-        2. Propagate file changes everywhere
-        3. Put the character in a table
+        2. Propagate file changes everywhere                DONE? Not sure what I meant by this
+        3. Redirection when finished making a character     DONE
+        5. Add checks on stats                              DONE
         
-    Version 1.0
-        1. Create tales???
+    Version 0.6
+        1. Put everything in a table
+        2. Finish everything on a character
+            1. Name and Appearance
+                    Appearance would be radio buttons
+            2. Stats
+            3. Bonds
+                Simple fields as an entry
+            4. Special move info
+            5. Equipment info
+    
+    Version 1.0     
+        1. Finish all the characters
+        2. Add a link to basic moves
+            This might be as an option on a character sheet and it would be hide and display
+            
+            
+    Version 1.5
+        1. Create tales???   
+        
         
     Version X
-        1. Add basic move sheet
-        2. Add town sheet
+        1. Add town sheet
