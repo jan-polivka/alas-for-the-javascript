@@ -40,8 +40,8 @@ Version progression:
         5. Add checks on stats                              DONE
         
     Version 0.6
-        1. Put everything in a table
-        2. Finish everything on a character
+        1. Put everything in a table                        DONE
+        2. Finish everything on a character                 DONE
             1. Name and Appearance
                     Appearance would be radio buttons
             2. Stats
@@ -49,16 +49,21 @@ Version progression:
                 Simple fields as an entry
             4. Special move info
             5. Equipment info
+            
+    Version 0.7
+        1. Add a link to basic moves
+            This might be as an option on a character sheet and it would be hide and display
+        2. Prevent from replacing character saves in case two people create the same char at the same time
+        
     
     Version 1.0     
         1. Finish all the characters
-        2. Add a link to basic moves
-            This might be as an option on a character sheet and it would be hide and display
             
             
     Version 1.5
-        1. Create tales???   
+        1. Create tales??? 
         
         
     Version X
-        1. Add town sheet
+        2. Add town sheet
+        3. Edit a character

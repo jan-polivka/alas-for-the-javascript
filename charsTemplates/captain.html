@@ -4,51 +4,141 @@
 
 <p id="nameAppearanceSec">
 
-      <label for="charName">Name</label>
-      <input type="text" id="charName" name="charName" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"><br>
-    
+     
 
+    <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+    </style>
+    <table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-c3ow">Name</th>
+        <th class="tg-c3ow" colspan="4"><input type="text" id="charName" name="charName" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"><br></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-c3ow" colspan="5">Appearance</td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Gender</td>
+        <td class="tg-0pky"><input type="radio" id="male" name="gender" value="male" onclick="appearanceSel(this.id)" autocomplete="off">
+        <label for="male">Male</label></td>
+        <td class="tg-0pky"><input type="radio" id="female" name="gender" value="female" onclick="appearanceSel(this.id)" autocomplete="off">
+        <label for="female">Female</label></td>
+        <td class="tg-0pky"><input type="radio" id="nonbinary" name="gender" value="nonbinary" onclick="appearanceSel(this.id)" autocomplete="off">
+        <label for="nonbinary">Nonbinary</label></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Eyes</td>
+        <td class="tg-0pky"><input type="radio" id="focused" name="eyes" value="focused" onclick="appearanceSel(this.id)" autocomplete="off">
+        <label for="focused">Focused</label></td>
+        <td class="tg-0pky"><input type="radio" id="cold" name="eyes" value="cold" onclick="appearanceSel(this.id)" autocomplete="off">
+        <label for="cold">Cold</label></td>
+        <td class="tg-0pky"><input type="radio" id="alluring" name="eyes" value="alluring" onclick="appearanceSel(this.id)" autocomplete="off">
+        <label for="alluring">Alluring</label></td>
+        <td class="tg-0pky"><input type="radio" id="honest" name="eyes" value="honest" onclick="appearanceSel(this.id)" autocomplete="off">
+        <label for="honest">Honest</label><br></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Face</td>
+        <td class="tg-0pky"><input type="radio" id="open" name="face" value="open" onclick="appearanceSel(this.id)" autocomplete="off">
+        <label for="open">Open</label></td>
+        <td class="tg-0pky"><input type="radio" id="tense" name="face" value="tense" onclick="appearanceSel(this.id)" autocomplete="off">
+        <label for="tense">Tense</label></td>
+        <td class="tg-0pky"><input type="radio" id="bony" name="face" value="bony" onclick="appearanceSel(this.id)" autocomplete="off">
+        <label for="bony">Bony</label></td>
+        <td class="tg-0pky"><input type="radio" id="baby" name="face" value="baby" onclick="appearanceSel(this.id)" autocomplete="off">
+        <label for="baby">Baby</label><br></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Body</td>
+        <td class="tg-0pky"><input type="radio" id="thin" name="body" value="thin" onclick="appearanceSel(this.id)" autocomplete="off">
+        <label for="thin">Thin</label></td>
+        <td class="tg-0pky"><input type="radio" id="built" name="body" value="built" onclick="appearanceSel(this.id)" autocomplete="off">
+        <label for="built">Built</label></td>
+        <td class="tg-0pky"><input type="radio" id="fat" name="body" value="fat"  onclick="appearanceSel(this.id)" autocomplete="off">
+        <label for="fat">Fat</label></td>
+        <td class="tg-0pky"><br></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Dress</td>
+        <td class="tg-0pky"><input type="radio" id="uniform" name="dress" value="uniform" onclick="appearanceSel(this.id)" autocomplete="off">
+        <label for="uniform">Immaculate naval uniform</label></td>
+        <td class="tg-0pky"><input type="radio" id="coat" name="dress" value="coat"  onclick="appearanceSel(this.id)" autocomplete="off">
+        <label for="coat">Loose swashbuckler coat</label></td>
+        <td class="tg-0pky"><input type="radio" id="vest" name="dress" value="vest" onclick="appearanceSel(this.id)" autocomplete="off">
+        <label for="vest">Plain vest</label>  </td>
+        <td class="tg-0pky"><br></td>
+      </tr>
+    </tbody>
+    </table>
+    <br>
+        <input type="submit" value="Next" onclick="submitFunc()" id="appearanceButton">
+        
 
-    Appearance
-        <br>
-        <span style="margin-left:2.0em">
-        Gender<br>
-        </span>
-        <input type="radio" id="male" name="gender" value="male" style="margin-left:2.5em" onclick="genderSel(this.id)" autocomplete="off">
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="female" onclick="genderSel(this.id)" autocomplete="off">
-        <label for="female">Female</label>
-        <input type="radio" id="nonbinary" name="gender" value="nonbinary" onclick="genderSel(this.id)" autocomplete="off">
-        <label for="nonbinary" >Nonbinary</label>
-        <br>
-        <br>
-        <input type="submit" value="Next" onclick="submitFunc()" id="genderButton">
         
         
 
 </p>
 
 <p id="statsSec">
-    Stats
+        
+    <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-wp8o{border-color:#000000;text-align:center;vertical-align:top}
+    </style>
+    <table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-wp8o" colspan="2">Stats</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-wp8o">Brains</td>
+        <td class="tg-wp8o">
+        <input type="text" id="brains" name="brains" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+      </tr>
+      <tr>
+        <td class="tg-wp8o">Brawn</td>
+        <td class="tg-wp8o">
+    <input type="text" id="brawn" name="brawn" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+      </tr>
+      <tr>
+        <td class="tg-wp8o">Beauty</td>
+        <td class="tg-wp8o"><input type="text" id="beauty" name="beauty" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+      </tr>
+      <tr>
+        <td class="tg-wp8o">Balance</td>
+        <td class="tg-wp8o">+2</td>
+      </tr>
+      <tr>
+        <td class="tg-wp8o">Beyond</td>
+        <td class="tg-wp8o"><input type="text" id="beyond" name="beyond" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+      </tr>
+    </tbody>
+    </table>
     <br>
-    <label for="brains">Brains:</label>
-    <input type="text" id="brains" name="brains" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"><br>
-    <label for="brawn">Brawn:</label>
-    <input type="text" id="brawn" name="brawn" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"><br>
-    <label for="beauty">Beauty:</label>
-    <input type="text" id="beauty" name="beauty" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"><br>
-    Balance: +2 <br>
-    <label for="beyond">Beyond:</label>
-    <input type="text" id="beyond" name="beyond" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"><br>
-    <br>
-    <br>
-    <br>
+    
+    
     <input type="submit" value="Next" onclick="submitFunc()" id="statsButton">
     
 </p>
 
 <p id="bondsSec">
         Bonds
+        <br>
         <br>
         <input type="text" id="bondOne" name="bondOne" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> once stood up to you and
 refused to obey a direct order
@@ -80,12 +170,18 @@ refused to obey a direct order
 
 var section = 0;
 var sectionList = ["nameAppearanceSec", "statsSec", "bondsSec"];
-let attributesList = ['charName', 'gender', 'brains', 'brawn', 'beauty', 'balance', 'beyond', 'bondOne',
-                        'bondTwo', 'bondThree', 'bondFour'];
                         
-let attributesDict = {'charName':'', 'gender':'', 'brains':0, 'brawn':0, 'beauty':0, 'balance':+2, 'beyond':0, 'bondOne':'',
-                        'bondTwo':'', 'bondThree':'', 'bondFour':'', 'health':4}
-let bondTestVar = "";
+let attributesDict = {'charName':'', 'gender':'', 'eyes':'', 'face':'', 'body':'', 'dress':'',
+                        'brains':0, 'brawn':0, 'beauty':0, 'balance':+2, 'beyond':0, 'bondOne':'',
+                        'bondTwo':'', 'bondThree':'', 'bondFour':'', 'health':4,
+                        'specialMove':'<b>My Reputation Preceeds Me</b><br>When you meet someone important, <b>ROLL+BALANCE</b>'+
+                        '<br><b>ON A SUCCESS</b>: They\'ve heard of you, and you say what they\'ve heard.<br>'+
+                        '<b>ON A 10+</b>: You take +1 forward when dealing with them.<br>' +
+                        '<b>ON A MISS</b>: They\'ve heard of you, but GM will decide what.',
+                        'equipment':'Compass<br>'+
+                        'An ornate sword (1 harm, valuable, hand weapon)<br>' + 
+                        'Captain\'s Regalia (1 armour)<br>' +
+                        'A Captain\'s wage (well off)'};
 
 function loadSite()
 {
@@ -119,10 +215,7 @@ function submitFunc()
 function sendData()
 {
     console.log("send");
-    attributesList.forEach(function (item, index) {
-        console.log(index);
-        console.log(attributesDict[item]);
-    });
+    console.log(attributesDict);
     
     
     console.log(attributesDict);
@@ -161,20 +254,60 @@ function extractText(text, id)
 {
     if (id == 'brains' || id == 'brawn' || id == 'beauty' || id == 'balance' || id == 'beyond')
         attributesDict[id] = parseInt(text);
+    else if (id == 'bondOne')
+        attributesDict[id] = '<b>' + text + '</b> once stood up to you and refused to obey a direct order';
+    else if (id == 'bondTwo')
+        attributesDict[id] = 'You\'ve got your eye on <b>' + text + '</b> for first mate, whether or not they agree';
+    else if (id == 'bondThree')
+        attributesDict[id] = '<b>' + text + '</b> owes you for giving them a second chance after their gaol sentence.';
+    else if (id == 'bondFour')
+        attributesDict[id] = '<b>' + text + '</b> is the only one on board to have seen your private quarters';
     else
         attributesDict[id] = text;
 }
 
-function genderSel(gender)
+function appearanceSel(id)
 {
-    if(gender == 'male')
-        attributesDict['gender'] = "Male";
-    else if(gender == 'female')
-        attributesDict['gender'] = "Female";
-    else if(gender == 'nonbinary')
-        attributesDict['gender'] = "Nonbinary";
+    if(id == 'male')
+        attributesDict['gender'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if(id == 'female')
+        attributesDict['gender'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if(id == 'nonbinary')
+        attributesDict['gender'] = id.charAt(0).toUpperCase() + id.slice(1);   
+        
+    else if(id == 'focused')    
+        attributesDict['eyes'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if(id == 'cold')
+        attributesDict['eyes'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if(id == 'alluring')
+        attributesDict['eyes'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if(id == 'honest')
+        attributesDict['eyes'] = id.charAt(0).toUpperCase() + id.slice(1);
+        
+    else if(id == 'open')
+        attributesDict['face'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if(id == 'tense')
+        attributesDict['face'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if(id == 'bony')
+        attributesDict['face'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if(id == 'baby')
+        attributesDict['face'] = id.charAt(0).toUpperCase() + id.slice(1);
+        
+    else if(id == 'thin')    
+        attributesDict['body'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if(id == 'built')
+        attributesDict['body'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if(id == 'fat')
+        attributesDict['body'] = id.charAt(0).toUpperCase() + id.slice(1);
+        
+    else if(id == 'uniform')    
+        attributesDict['dress'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if(id == 'coat')
+        attributesDict['dress'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if(id == 'vest')
+        attributesDict['dress'] = id.charAt(0).toUpperCase() + id.slice(1);
     else
-        console.log("all good");
+        console.log("appearance went wrong");
     
 }
 

@@ -1,34 +1,113 @@
 <body onload="loadChar()">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<a href="/">Go Home</a><br>
+<a href="/">Go Home</a>
+<br>
 
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax"><b>Name</b></th>
+    <th class="tg-0lax"><span id="charName"></span></th>
+    <td class="tg-0lax"></td>
+    <th class="tg-0lax" colspan="2"><b>Stats</b></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax"><b>Gender</b></td>
+    <td class="tg-0lax"><span id="gender"></span></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"><b>Brains</b></td>
+    <td class="tg-baqh"><span id="brains"></span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><b>Eyes</b></td>
+    <td class="tg-0lax"><span id="eyes"></span></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"><b>Brawn</b></td>
+    <td class="tg-baqh"><span id="brawn"></span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><b>Face</b></td>
+    <td class="tg-0lax"><span id="face"></span></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"><b>Beauty</b></td>
+    <td class="tg-baqh"><span id="beauty"></span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><b>Body</b></td>
+    <td class="tg-0lax"><span id="body"></span></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"><b>Balance</b></td>
+    <td class="tg-baqh"><span id="balance"></span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><b>Dress</b></td>
+    <td class="tg-0lax"><span id="dress"></span></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"><b>Beyond</b></td>
+    <td class="tg-baqh"><span id="beyond"></span></td>
+  </tr>
+</tbody>
+</table>
 
-name <span id="charName"></span>
 <br>
-gender <span id="gender"></span>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-baqh" colspan="2">Health points</th>
+  </tr>
+  <tr>
+    <th class="tg-baqh" colspan="2"><span id="health"></span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-baqh"><button onclick="incrementHealth()">+1</button> <br></td>
+    <td class="tg-baqh"><button onclick="decrementHealth()">-1</button></td>
+  </tr>
+</tbody>
+</table>
+
 <br>
-brains <span id="brains"></span>
+<b>Bonds</b>
 <br>
-brawn <span id="brawn"></span>
-<br>
-beauty <span id="beauty"></span>
-<br>
-balance <span id="balance"></span>
-<br>
-beyond <span id="beyond"></span>
-<br>
-bonds
 <span id="bondOne"></span>
+<br>
 <span id="bondTwo"></span>
+<br>
 <span id="bondThree"></span>
+<br>
 <span id="bondFour"></span>
 <br>
+<br>
+<b>Special Move</b>:<br>
+<span id="specialMove"></span>
+<br>
+<br>
+<b>Equipment</b>:
+<br>
+<span id="equipment"></span>
 
-<br>
-<span id="health"></span>
-<button onclick="incrementHealth()">+1</button> 
-<button onclick="decrementHealth()">-1</button>
-<br>
+
 
 </body>
 
