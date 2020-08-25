@@ -150,11 +150,14 @@ def characterNew():
 def characterSave():
     char = request.args.get('char')
     data = request.get_json()
-           
-    with open("chars/" + char + ".json", 'w') as json_file:
-        json.dump(data, json_file)
-    
-    return ('', 200)
+
+    print (os.path.isfile("chars/" + char + ".json"))
+    if (os.path.isfile("chars/" + char + ".json") == False):
+        with open("chars/" + char + ".json", 'w') as json_file:
+            json.dump(data, json_file)    
+        return ('ok')
+    else:
+        return ('bad')
     
 @app.route('/merc')
 def merc():

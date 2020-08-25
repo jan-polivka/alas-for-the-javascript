@@ -1,0 +1,395 @@
+<body onload="loadSite()">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<a href="/">Go Home</a><br>
+
+<p id ="descriptionSec">
+    
+    <b>Surgeon</b>
+    <br>
+    Not every man could saw the limb off a gangrenous sailor subdued with only half a bottle of rum,
+    but that happens to be one of your key talents.  Sore, scab, flu or itch, you combat them all by
+    poultice or scalpel.  Moreover, and much to your own surprise, most of the people you treat even
+    seem to get better.  You wouldn't say you're fond of helping people, but you do like the smug feeling
+    of having saved most of the crew's lives.
+    <br>
+    <br>
+    
+    <b>A Surgeon's Work</b>
+    <br>You can use your surgeon's tools to treat a wounded person, <b>ROLL+BRAINS</b><br>
+    <b>ON A 10+</b>: Heal one segment<br>
+    <b>ON A 7-9</b>: Heal one segment but you're acting under pressure with a scalpel<br>
+    <b>ON A MISS</b>: You don't health your patient and they fall into a state of hallucination and sense the beyond
+    
+    
+    
+    
+    <br>
+    <br>
+    <input type="submit" value="Next" onclick="submitFunc()" id="appearanceButton">
+    
+</p>
+
+<p id="nameAppearanceSec">
+
+     
+
+    <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+    </style>
+    <table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-c3ow">Name</th>
+        <th class="tg-c3ow" colspan="4"><input type="text" id="charName" name="charName" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"><br></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-c3ow" colspan="5">Appearance</td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Gender</td>
+        <td class="tg-0pky"><input type="radio" id="male" name="gender" value="male" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="male">Male</label></td>
+        <td class="tg-0pky"><input type="radio" id="female" name="gender" value="female" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="female">Female</label></td>
+        <td class="tg-0pky"><input type="radio" id="nonbinary" name="gender" value="nonbinary" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="nonbinary">Nonbinary</label></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Eyes</td>
+        <td class="tg-0pky"><input type="radio" id="kind" name="eyes" value="kind" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="kind">kind</label></td>
+        <td class="tg-0pky"><input type="radio" id="dancing" name="eyes" value="dancing" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="dancing">dancing</label></td>
+        <td class="tg-0pky"><input type="radio" id="beady" name="eyes" value="beady" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="beady">beady</label></td>
+        <td class="tg-0pky"><input type="radio" id="restless" name="eyes" value="restless" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="restless">restless</label></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Face</td>
+        <td class="tg-0pky"><input type="radio" id="warm" name="face" value="warm" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="warm">warm</label></td>
+        <td class="tg-0pky"><input type="radio" id="plain" name="face" value="plain" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="plain">plain</label></td>
+        <td class="tg-0pky"><input type="radio" id="serene" name="face" value="serene" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="serene">serene</label></td>
+        <td class="tg-0pky"><input type="radio" id="defined" name="face" value="defined" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="defined">defined</label></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Body</td>
+        <td class="tg-0pky"><input type="radio" id="toned" name="body" value="toned" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="toned">toned</label></td>
+        <td class="tg-0pky"><input type="radio" id="flabby" name="body" value="flabby" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="flabby">flabby</label></td>
+        <td class="tg-0pky"><input type="radio" id="wiry" name="body" value="wiry" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="wiry">wiry</label></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Dress</td>
+        <td class="tg-0pky"><input type="radio" id="coat" name="dress" value="coat" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="coat">Fitted surgeon's coat</label></td>
+        <td class="tg-0pky"><input type="radio" id="garb" name="dress" value="garb" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="garb">Stained apron over common garb</label></td>
+        <td class="tg-0pky"><input type="radio" id="clothes" name="dress" value="clothes" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="clothes">Neat civilian clothes</label></td>
+        <td class="tg-0pky"></td>
+      </tr>
+    </tbody>
+    </table>
+    <br>
+        <input type="submit" value="Next" onclick="submitFunc()" id="appearanceButton">
+        
+
+        
+        
+
+</p>
+
+<p id="statsSec">
+        
+    <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-wp8o{border-color:#000000;text-align:center;vertical-align:top}
+    </style>
+    <table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-wp8o" colspan="2">Stats</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-wp8o">Brains</td>
+        <td class="tg-wp8o">+2</td>
+        <!-- <input type="text" id="brains" name="brains" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td> -->
+      </tr>
+      <tr>
+        <td class="tg-wp8o">Brawn</td>
+        <!-- <td class="tg-wp8o">+2</td> -->
+        <td class="tg-wp8o"><input type="text" id="brawn" name="brawn" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+      </tr>
+      <tr>
+        <td class="tg-wp8o">Beauty</td>
+        <!-- <td class="tg-wp8o">+2</td> -->
+        <td class="tg-wp8o"><input type="text" id="beauty" name="beauty" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+      </tr>
+      <tr>
+        <td class="tg-wp8o">Balance</td>   
+        <!-- <td class="tg-wp8o">+2</td>         -->
+        <td class="tg-wp8o"><input type="text" id="balance" name="balance" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+      </tr>
+      <tr>
+        <td class="tg-wp8o">Beyond</td>
+        <!-- <td class="tg-wp8o">+2</td> -->
+        <td class="tg-wp8o"><input type="text" id="beyond" name="beyond" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+      </tr>
+    </tbody>
+    </table>
+    <br>
+    
+    
+    <input type="submit" value="Next" onclick="submitFunc()" id="statsButton">
+    <p style="color:red" id="statsWarning"><b>You did not allocate properly</b></p>
+    
+</p>
+
+<p id="bondsSec">
+        Bonds
+        <br>
+        <br>    
+        <input type="text" id="bondOne" name="bondOne" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> put a hand in when it
+        mattered the most and helped you save a life.
+        <br>
+        <br>
+        <input type="text" id="bondTwo" name="bondTwo" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> seems suitably impressed
+        by your skills and you just can't help showing off in front of them.
+        <br>
+        <br> 
+        <input type="text" id="bondThree" name="bondThree" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> has been beside you
+        and has seen everything you've seen.
+        <br>
+        <br>
+        <input type="text" id="bondFour" name="bondFour" autocomplete="off" onkeyup="extractText(this.value, this.id)"> seems to you to be doomed for
+        self-destruction.
+        <br>
+        <br>
+        <input type="submit" value="Next" onclick="submitFunc()" id="bondsButton">
+        
+        
+        
+</p>
+
+
+<p id="equipmentSec">
+
+     
+
+    <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+    </style>
+    <table class="tg">
+    <tbody>
+      <tr>
+        <td class="tg-c3ow" colspan="3">What's your income</td>
+      </tr>
+      <tr>       
+        <td class="tg-0pky"><input type="radio" id="average" name="equipment" value="average" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="average">average</label></td>
+        <td class="tg-0pky"><input type="radio" id="well" name="equipment" value="well" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="well">well off</label></td>
+      </tr>
+    </tbody>
+    </table>
+    <br>
+    <input type="submit" value="Next" onclick="submitFunc()" id="appearanceButton">
+   
+
+</p> 
+
+
+</body>
+
+<script>
+
+var section = 0;
+var sectionList = ['descriptionSec',"nameAppearanceSec", "statsSec", "bondsSec", "equipmentSec"];
+                        
+let attributesDict = {'charName':'', 'gender':'', 'eyes':'', 'face':'', 'body':'', 'dress':'',
+                        'brains':2, 'brawn':0, 'beauty':0, 'balance':0, 'beyond':0, 'bondOne':'',
+                        'bondTwo':'', 'bondThree':'', 'bondFour':'', 'health':4,
+                        'specialMove':'<b>A Surgeon\'s Work</b><br>You can use your surgeon\'s tools to treat a wounded person, <b>ROLL+BRAINS</b><br>'+
+                        '<b>ON A 10+</b>: Heal one segment<br>' +
+                        '<b>ON A 7-9</b>: Heal one segment but you\'re acting under pressure with a scalpel<br>'+
+                        '<b>ON A MISS</b>: You don\'t health your patient and they fall into a state of hallucination and sense the beyond.',
+                        'equipment':'A research book on a subject of your choice<br>'+
+                        'Surgeon\'s tools<br>' + 
+                        'A knife (1 harm, hand weapon)<br>' + 
+                        'Surgeon\'s smock (1 armour)<br>' + 
+                        'A Surgeon\'s wage '};
+
+let selWealth = "";
+
+
+function loadSite()
+{
+    sectionList.forEach(function (item, index) {
+        if (item != "descriptionSec")
+        {
+            document.getElementById(item).style.display = "none";
+        }
+    });
+    document.getElementById('statsWarning').style.display = "none";
+
+}
+
+function submitFunc()
+{     
+    if (section >= sectionList.length - 1)
+    {
+        section = sectionList.length - 1;
+        attributesDict['equipment'] = attributesDict['equipment'] + selWealth;
+        sendData();
+        
+    }
+    else if (sectionList[section] == 'statsSec')
+    {
+        let statsSum = attributesDict['brains'] + attributesDict['brawn'] + attributesDict['beauty'];
+        statsSum = statsSum + attributesDict['balance'] + attributesDict['beyond'];        
+        if (statsSum == 3)
+        {
+            
+            document.getElementById('statsWarning').style.display = "none";
+            document.getElementById(sectionList[section]).style.display = "none";
+            section++;
+            document.getElementById(sectionList[section]).style.display = "block";
+        }
+        else
+            document.getElementById('statsWarning').style.display = "block";
+        
+    
+    }
+    else
+    {
+        document.getElementById(sectionList[section]).style.display = "none";
+        section++;
+        document.getElementById(sectionList[section]).style.display = "block";
+    }
+    
+}
+
+function sendData()
+{
+    console.log("send");
+    console.log(attributesDict);
+    
+    
+    console.log(attributesDict);
+    
+    let xhr = new XMLHttpRequest(); 
+    let url = "characterSave?char=surgeon";
+
+    // open a connection 
+    xhr.open("POST", url, true); 
+
+    // Set the request header i.e. which type of content you are sending 
+    xhr.setRequestHeader("Content-Type", "application/json"); 
+
+    // Create a state change callback 
+    
+    xhr.onreadystatechange = function () { 
+        if (xhr.readyState === 4 && xhr.status === 200) { 
+
+            // Print received data from server 
+            //result.innerHTML = this.responseText;
+            //console.log(this.responseText);
+            if (this.responseText == 'ok')
+                window.location.replace("characterEx?char=surgeon");            
+            else if(this.responseText == 'bad')
+            {
+                alert('This character already exists, please pick a different one');
+                window.location.replace("/");  
+            }
+
+        } 
+    }; 
+
+    console.log(attributesDict);
+    // Converting JSON data to string 
+    var data = JSON.stringify(attributesDict); 
+
+    // Sending data with the request 
+    xhr.send(data);
+    
+}
+
+function extractText(text, id)
+{
+    if (id == 'brains' || id == 'brawn' || id == 'beauty' || id == 'balance' || id == 'beyond')
+        attributesDict[id] = parseInt(text);
+    else if (id == 'bondOne')
+        attributesDict[id] = '<b>' + text + '</b> put a hand in when it mattered the most and helped you save a life.';
+    else if (id == 'bondTwo')
+        attributesDict[id] = '<b>' + text + '</b> seems suitably impressed by your skills and you just can\'t help showing off in front of them.';
+    else if (id == 'bondThree')
+        attributesDict[id] = '<b>' + text + '</b> has been beside you and has seen everything you\'ve seen.';
+    else if (id == 'bondFour')
+        attributesDict[id] = '<b>' + text + '</b> seems to you to be doomed for self-destruction.';
+    else
+        attributesDict[id] = text;
+
+}
+
+function appearanceSel(id, name)
+{
+    if (name == 'gender')
+        attributesDict['gender'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if (name == 'eyes')
+        attributesDict['eyes'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if (name == 'face')
+        attributesDict['face'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if (name == 'body')
+        attributesDict['body'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if (name == 'dress')
+    {
+        if (id == 'coat')
+            attributesDict['dress'] = 'Fitted surgeon\'s coat';
+        if (id == 'garb')
+            attributesDict['dress'] = 'Stained apron over a common garb';
+        if (id == 'clothes')
+            attributesDict['dress'] = 'Neat civilian clothes';
+    }
+    else if (name == 'equipment')
+    {
+        //console.log("equipment");
+        if (id == 'average')
+            //attributesDict['equipment'] = attributesDict['equipment'] + '<br>Rapier (1 harm, hand weapon)';
+            selWealth = '(average)';
+        if (id == 'well')
+            //attributesDict['equipment'] = attributesDict['equipment'] + '<br>Rapier (1 harm, hand weapon)';
+            selWealth = '(well off)';
+        //console.log(attributesDict['equipment']);
+    }
+    else
+        console.log("appearance went wrong");
+    
+}
+
+</script>

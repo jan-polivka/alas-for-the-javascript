@@ -1,0 +1,360 @@
+<body onload="loadSite()">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<a href="/">Go Home</a><br>
+
+
+<p id ="descriptionSec">
+    
+    <b>Cook</b>
+    <br>
+    The stomach is the way to a sailor's heart  And more importantly, you know it's also the way to their loyalty,
+    their coin, and their secrets. You didn't pick this  job  by  accident. Nor did your culinary passion inspire you
+    to  choose a  ife as a ship's cook. You're in this role for the sheer power it provides.
+    Sure, when you're two days from land, you're at the bottom of the heap. But after two months, sailors are tripping
+    over themselves to do your bidding. And if one  objects?  Let's  just  say  there'll  be  nice  surprise  waiting  for  them  in  tonight's dinner.
+    <br>
+    <br>
+    
+    <b>A Handsome Feast</b>
+    <br>When you cook everyone a meal, choose to make a delicious feast or a nauseating disast, <b>ROLL+BRAWN</b><br>
+    <b>ON A 10+</b>: Choose 2.<br>
+    <b>ON A 7-9</b>: Choose 1.<br>
+    Everyone becomes uninhibited and loose-lipped.<br>
+    Everyone feels obliged to repay you for your hospitality.<br>
+    Everyone is sick and temporarily incapacitated.<br>
+    Everyone remembers little of the feast except food poisoning.<br>
+    <b>ON A MISS</b>: The GM chooses 1 and then makes things worse.
+    
+    
+    <br>
+    <br>
+    <input type="submit" value="Next" onclick="submitFunc()" id="appearanceButton">
+    
+</p>
+
+<p id="nameAppearanceSec">
+
+     
+
+    <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+    </style>
+    <table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-c3ow">Name</th>
+        <th class="tg-c3ow" colspan="4"><input type="text" id="charName" name="charName" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"><br></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-c3ow" colspan="5">Appearance</td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Gender</td>
+        <td class="tg-0pky"><input type="radio" id="male" name="gender" value="male" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="male">Male</label></td>
+        <td class="tg-0pky"><input type="radio" id="female" name="gender" value="female" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="female">Female</label></td>
+        <td class="tg-0pky"><input type="radio" id="nonbinary" name="gender" value="nonbinary" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="nonbinary">Nonbinary</label></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Eyes</td>
+        <td class="tg-0pky"><input type="radio" id="jolly" name="eyes" value="jolly" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="jolly">jolly</label></td>
+        <td class="tg-0pky"><input type="radio" id="cruel" name="eyes" value="cruel" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="cruel">cruel</label></td>
+        <td class="tg-0pky"><input type="radio" id="focused" name="eyes" value="focused" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="focused">focused</label></td>
+        <td class="tg-0pky"><input type="radio" id="scheming" name="eyes" value="scheming" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="scheming">scheming</label></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Face</td>
+        <td class="tg-0pky"><input type="radio" id="hearty" name="face" value="hearty" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="hearty">hearty</label></td>
+        <td class="tg-0pky"><input type="radio" id="cocky" name="face" value="cocky" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="cocky">cocky</label></td>
+        <td class="tg-0pky"><input type="radio" id="blank" name="face" value="blank" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="blank">blank</label></td>
+        <td class="tg-0pky"><input type="radio" id="asleep" name="face" value="asleep" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="asleep">asleep</label></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Body</td>
+        <td class="tg-0pky"><input type="radio" id="rounded" name="body" value="rounded" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="rounded">rounded</label></td>
+        <td class="tg-0pky"><input type="radio" id="chiselled" name="body" value="chiselled" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="chiselled">chiselled</label></td>
+        <td class="tg-0pky"><input type="radio" id="giant" name="body" value="giant" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="giant">giant</label></td>
+        <td class="tg-0pky"><input type="radio" id="hunched" name="body" value="hunched" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="hunched">hunched</label></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Dress</td>
+        <td class="tg-0pky"><input type="radio" id="greasy" name="dress" value="greasy" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="greasy">stained greasy apron</label></td>
+        <td class="tg-0pky"><input type="radio" id="white" name="dress" value="white" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="white">immaculate white apron</label></td>
+        <td class="tg-0pky"><input type="radio" id="homely" name="dress" value="homely" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="homely">embroidered homely apron</label></td>
+      </tr>
+    </tbody>
+    </table>
+    <br>
+        <input type="submit" value="Next" onclick="submitFunc()" id="appearanceButton">
+        
+
+        
+        
+
+</p>
+
+<p id="statsSec">
+        
+    <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-wp8o{border-color:#000000;text-align:center;vertical-align:top}
+    </style>
+    <table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-wp8o" colspan="2">Stats</th>
+      </tr>
+      <tr>
+        <th class="tg-wp8o" colspan="2">Allocate: 2,0,0,-1</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-wp8o">Brains</td>
+        <!-- <td class="tg-wp8o">+2</td> -->
+        <td class="tg-wp8o"><input type="text" id="brains" name="brains" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+      </tr>
+      <tr>
+        <td class="tg-wp8o">Brawn</td>
+        <td class="tg-wp8o">+2</td>
+        <!-- <td class="tg-wp8o"><input type="text" id="brawn" name="brawn" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td> -->
+      </tr>
+      <tr>
+        <td class="tg-wp8o">Beauty</td>
+        <!-- <td class="tg-wp8o">+2</td> -->
+        <td class="tg-wp8o"><input type="text" id="beauty" name="beauty" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+      </tr>
+      <tr>
+        <td class="tg-wp8o">Balance</td>   
+        <!-- <td class="tg-wp8o">+2</td>         -->
+        <td class="tg-wp8o"><input type="text" id="balance" name="balance" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+      </tr>
+      <tr>
+        <td class="tg-wp8o">Beyond</td>
+        <!-- <td class="tg-wp8o">+2</td> -->
+        <td class="tg-wp8o"><input type="text" id="beyond" name="beyond" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+      </tr>
+    </tbody>
+    </table>
+    <br>
+    
+    
+    <input type="submit" value="Next" onclick="submitFunc()" id="statsButton">
+    <p style="color:red" id="statsWarning"><b>You did not allocate properly</b></p>
+    
+</p>
+
+<p id="bondsSec">
+        Bonds
+        <br>
+        <br>    
+        You always put a little "something extra" in 
+        <input type="text" id="bondOne" name="bondOne" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)">'s food.
+        <br>
+        <br>
+        No matter who is formally in charge, 
+        <input type="text" id="bondTwo" name="bondTwo" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> is the only one you
+        really listen to.
+        <br>
+        <br> 
+        When you scratch
+        <input type="text" id="bondThree" name="bondThree" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)">'s back, they always
+        scratch you back. With interest.
+        <br>
+        <br>
+        When your temper gets the best of you, 
+        <input type="text" id="bondFour" name="bondFour" autocomplete="off" onkeyup="extractText(this.value, this.id)"> can always help you calm down.
+        <br>
+        <br>
+        <input type="submit" value="Next" onclick="submitFunc()" id="bondsButton">
+        
+        
+        
+</p>
+
+
+</body>
+
+<script>
+
+var section = 0;
+var sectionList = ['descriptionSec',"nameAppearanceSec", "statsSec", "bondsSec"];
+                        
+let attributesDict = {'charName':'', 'gender':'', 'eyes':'', 'face':'', 'body':'', 'dress':'',
+                        'brains':0, 'brawn':2, 'beauty':0, 'balance':0, 'beyond':0, 'bondOne':'',
+                        'bondTwo':'', 'bondThree':'', 'bondFour':'', 'health':4,
+                        'specialMove':'<b>A Handsome Feast</b><br>When you cook everyone a meal, choose to make a delicious feast or a nauseating disast, <b>ROLL+BRAWN</b><br>'+
+                        '<b>ON A 10+</b>: Choose 2.<br>' +
+                        '<b>ON A 7-9</b>: Choose 1.<br>'+
+                        'Everyone becomes uninhibited and loose-lipped.<br>'+
+                        'Everyone feels obliged to repay you for your hospitality.<br>'+
+                        'Everyone is sick and temporarily incapacitated.<br>'+
+                        'Everyone remembers little of the feast except food poisoning.<br>'+
+                        '<b>ON A MISS</b>: The GM chooses 1 and then makes things worse.',
+                        'equipment':'A butcher\'s cleaver (1 harm, hand weapon)<br>'+
+                        'An oversized iron pot<br>' + 
+                        'A secret store of choice herbs and exotic spices (3 doses, adds +1 to a handsome feast)<br>' + 
+                        'A Cook\'s wage (average)<br>'};
+
+function loadSite()
+{
+    sectionList.forEach(function (item, index) {
+        if (item != "descriptionSec")
+        {
+            document.getElementById(item).style.display = "none";
+        }
+    });
+    document.getElementById('statsWarning').style.display = "none";
+
+}
+
+function submitFunc()
+{     
+    if (section >= sectionList.length - 1)
+    {
+        section = sectionList.length - 1;
+        sendData();
+        
+    }
+    else if (sectionList[section] == 'statsSec')
+    {
+        let statsSum = attributesDict['brains'] + attributesDict['brawn'] + attributesDict['beauty'];
+        statsSum = statsSum + attributesDict['balance'] + attributesDict['beyond'];        
+        if (statsSum == 3)
+        {
+            
+            document.getElementById('statsWarning').style.display = "none";
+            document.getElementById(sectionList[section]).style.display = "none";
+            section++;
+            document.getElementById(sectionList[section]).style.display = "block";
+        }
+        else
+            document.getElementById('statsWarning').style.display = "block";
+        
+    
+    }
+    else
+    {
+        document.getElementById(sectionList[section]).style.display = "none";
+        section++;
+        document.getElementById(sectionList[section]).style.display = "block";
+    }
+    
+}
+
+function sendData()
+{
+    console.log("send");
+    console.log(attributesDict);
+    
+    
+    console.log(attributesDict);
+    
+    let xhr = new XMLHttpRequest(); 
+    let url = "characterSave?char=cook";
+
+    // open a connection 
+    xhr.open("POST", url, true); 
+
+    // Set the request header i.e. which type of content you are sending 
+    xhr.setRequestHeader("Content-Type", "application/json"); 
+
+    // Create a state change callback 
+    
+    xhr.onreadystatechange = function () { 
+        if (xhr.readyState === 4 && xhr.status === 200) { 
+
+            // Print received data from server 
+            //result.innerHTML = this.responseText;
+            //console.log(this.responseText);
+            if (this.responseText == 'ok')
+                window.location.replace("characterEx?char=cook");            
+            else if(this.responseText == 'bad')
+            {
+                alert('This character already exists, please pick a different one');
+                window.location.replace("/");  
+            }
+
+        } 
+    }; 
+
+    console.log(attributesDict);
+    // Converting JSON data to string 
+    var data = JSON.stringify(attributesDict); 
+
+    // Sending data with the request 
+    xhr.send(data);
+    
+}
+
+function extractText(text, id)
+{
+    if (id == 'brains' || id == 'brawn' || id == 'beauty' || id == 'balance' || id == 'beyond')
+        attributesDict[id] = parseInt(text);
+    else if (id == 'bondOne')
+        attributesDict[id] = 'You always put a little "something extra" in  <b>' + text + '</b>\'s food.';
+    else if (id == 'bondTwo')
+        attributesDict[id] = 'No matter who is formally in charge, <b>' + text + '</b> is the only one you really listen to.';
+    else if (id == 'bondThree')
+        attributesDict[id] = 'When you scratch <b>' + text + '</b>\'s back, they always scratch you back. With interest.';
+    else if (id == 'bondFour')
+        attributesDict[id] = 'When your temper gets the best of you, <b>' + text + '</b> can always help you calm down.';
+    else
+        attributesDict[id] = text;
+
+}
+
+function appearanceSel(id, name)
+{
+    if (name == 'gender')
+        attributesDict['gender'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if (name == 'eyes')
+        attributesDict['eyes'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if (name == 'face')
+        attributesDict['face'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if (name == 'body')
+        attributesDict['body'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if (name == 'dress')
+    {
+        if (id == 'greasy')
+            attributesDict['dress'] = 'Stained greasy apron';
+        if (id == 'white')
+            attributesDict['dress'] = 'Immaculate white apron';
+        if (id == 'homely')
+            attributesDict['dress'] = 'Embroidered homely apron';
+    }
+    else
+        console.log("appearance went wrong");
+    
+}
+
+</script>

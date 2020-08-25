@@ -2,49 +2,162 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <a href="/">Go Home</a><br>
 
+<p id ="descriptionSec">
+    
+    <b>Mercenary</b>
+    <br>
+    Some  men  save  lives  professionally,  others  end  lives  professionally,
+    and  you  cannot  see  a  difference  in  value  between  them.
+    What  you  can  see  though,  is  that  not  one  of  the  sea  whelps  aboard  this
+    ship  knows  their  way  around  a  revolver.  It  looks  like  the  vessel's  military
+    safety  is  entirely  in  your  hands  –  which  is  exactly  how  you  like  it.
+    After  all,  there  is  a  reason  you  charge  premium rates. A sharp, deadly reason.
+    <br>
+    <br>
+    
+    <b>A True Professional</b><br>When you inflict terrible harm in combat, <b>ROLL+BRAWN</b><br>
+    <b>ON A 10+</b>: Choose 2<br>
+    <b>ON A 7-9</b>: Choose 1<br>
+    Your enemies retreat to a safe distance.<br>
+    Onlookers or enemies will tell stories of your prowess.<br>
+    Your enemies will want you for their own.<br>
+    Your enemies become afraid of you.<br>
+    <b>ON A MISS</b>: Choose 1 but the GM makes things worse anyway.
+    
+    
+    <br>
+    <br>
+    <input type="submit" value="Next" onclick="submitFunc()" id="appearanceButton">
+    
+</p>
+
 <p id="nameAppearanceSec">
 
-      <label for="charName">Name</label>
-      <input type="text" id="charName" name="charName" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"><br>
-    
+     
 
+    <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+    </style>
+    <table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-c3ow">Name</th>
+        <th class="tg-c3ow" colspan="4"><input type="text" id="charName" name="charName" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"><br></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-c3ow" colspan="5">Appearance</td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Gender</td>
+        <td class="tg-0pky"><input type="radio" id="male" name="gender" value="male" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="male">Male</label></td>
+        <td class="tg-0pky"><input type="radio" id="female" name="gender" value="female" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="female">Female</label></td>
+        <td class="tg-0pky"><input type="radio" id="nonbinary" name="gender" value="nonbinary" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="nonbinary">Nonbinary</label></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Eyes</td>
+        <td class="tg-0pky"><input type="radio" id="arresting" name="eyes" value="arresting" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="arresting">Arresting</label></td>
+        <td class="tg-0pky"><input type="radio" id="hollow" name="eyes" value="hollow" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="hollow">Hollow</label></td>
+        <td class="tg-0pky"><input type="radio" id="laughing" name="eyes" value="laughing" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="laughing">Laughing</label></td>
+        <td class="tg-0pky"><input type="radio" id="unreadable" name="eyes" value="unreadable" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="unreadable">Unreadable</label></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Face</td>
+        <td class="tg-0pky"><input type="radio" id="narrow" name="face" value="narrow" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="narrow">Narrow</label></td>
+        <td class="tg-0pky"><input type="radio" id="gorgeous" name="face" value="gorgeous" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="gorgeous">Gorgeous</label></td>
+        <td class="tg-0pky"><input type="radio" id="scarred" name="face" value="scarred" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="scarred">Scarred</label></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Body</td>
+        <td class="tg-0pky"><input type="radio" id="muscled" name="body" value="muscled" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="muscled">Muscled</label></td>
+        <td class="tg-0pky"><input type="radio" id="agile" name="body" value="agile" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="agile">Agile</label></td>
+        <td class="tg-0pky"><input type="radio" id="huge" name="body" value="huge" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="huge">Huge</label></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Dress</td>
+        <td class="tg-0pky"><input type="radio" id="vest" name="dress" value="vest" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="vest">Leather utility vest</label></td>
+        <td class="tg-0pky"><input type="radio" id="uniform" name="dress" value="uniform" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="uniform">Foreign military uniform</label></td>
+        <td class="tg-0pky"><input type="radio" id="clothing" name="dress" value="clothing" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="clothing">Light loose clothing</label></td>
+        <td class="tg-0pky"></td>
+      </tr>
+    </tbody>
+    </table>
+    <br>
+        <input type="submit" value="Next" onclick="submitFunc()" id="appearanceButton">
+        
 
-    Appearance
-        <br>
-        <span style="margin-left:2.0em">
-        Gender<br>
-        </span>
-        <input type="radio" id="male" name="gender" value="male" style="margin-left:2.5em" onclick="genderSel(this.id)" autocomplete="off">
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="female" onclick="genderSel(this.id)" autocomplete="off">
-        <label for="female">Female</label>
-        <input type="radio" id="nonbinary" name="gender" value="nonbinary" onclick="genderSel(this.id)" autocomplete="off">
-        <label for="nonbinary" >Nonbinary</label>
-        <br>
-        <br>
-        <input type="submit" value="Next" onclick="submitFunc()" id="genderButton">
         
         
 
 </p>
 
 <p id="statsSec">
-    Stats
+        
+    <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-wp8o{border-color:#000000;text-align:center;vertical-align:top}
+    </style>
+    <table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-wp8o" colspan="2">Stats</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-wp8o">Brains</td>
+        <td class="tg-wp8o">
+        <input type="text" id="brains" name="brains" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+      </tr>
+      <tr>
+        <td class="tg-wp8o">Brawn</td>
+        <td class="tg-wp8o">+2</td>
+      </tr>
+      <tr>
+        <td class="tg-wp8o">Beauty</td>
+        <td class="tg-wp8o"><input type="text" id="beauty" name="beauty" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+      </tr>
+      <tr>
+        <td class="tg-wp8o">Balance</td>        
+        <td class="tg-wp8o"><input type="text" id="balance" name="balance" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+      </tr>
+      <tr>
+        <td class="tg-wp8o">Beyond</td>
+        <td class="tg-wp8o"><input type="text" id="beyond" name="beyond" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+      </tr>
+    </tbody>
+    </table>
     <br>
-    Allocate 2,0,0,-1
-    <br>
-    <label for="brains">Brains:</label>
-    <input type="text" id="brains" name="brains" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"><br>
-    Brawn: +2 <br>
-    <label for="beauty">Beauty:</label>
-    <input type="text" id="beauty" name="beauty" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"><br>
-    <label for="balance">Balance:</label>
-    <input type="text" id="balance" name="balance" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"><br>
-    <label for="beyond">Beyond:</label>
-    <input type="text" id="beyond" name="beyond" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"><br>
-    <br>
-    <br>
-    <br>
+    
+    
     <input type="submit" value="Next" onclick="submitFunc()" id="statsButton">
     <p style="color:red" id="statsWarning"><b>You did not allocate properly</b></p>
     
@@ -53,21 +166,22 @@
 <p id="bondsSec">
         Bonds
         <br>
-        <input type="text" id="bondOne" name="bondOne" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> is secretly paying you extra to do a few
-        private jobs for them.  
+        <br>
+        <input type="text" id="bondOne" name="bondOne" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> is secretly paying 
+        you extra to do a fewprivate jobs for them.
         <br>
         <br>
-        <input type="text" id="bondTwo" name="bondTwo" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> reminds you of your child, you wish them
-        to be safe.
+        <input type="text" id="bondTwo" name="bondTwo" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> reminds you of your child,
+        you wish them to be safe.
         <br>
-        <br>
-        <input type="text" id="bondThree" name="bondThree" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> has fought on your side before, you trust
-        them implicitly.
+        <br> 
+        <input type="text" id="bondThree" name="bondThree" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> has fought on your 
+        side before, you trust them implicitly.
         <br>
         <br>
         You think
-        <input type="text" id="bondFour" name="bondFour" autocomplete="off" onkeyup="extractText(this.value, this.id)"> is weak, so you bully them to get
-        your way.
+        <input type="text" id="bondFour" name="bondFour" autocomplete="off" onkeyup="extractText(this.value, this.id)"> is weak, so you bully them
+        to get your way.
         <br>
         <br>
         <input type="submit" value="Next" onclick="submitFunc()" id="bondsButton">
@@ -77,46 +191,164 @@
 </p>
 
 
+<p id="equipmentSec">
+     
+
+    <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+    </style>
+    <table class="tg">
+    <tbody>
+      <tr>
+        <td class="tg-c3ow" colspan="4">Choose your firearm</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky" colspan="2"><input type="radio" id="pistol" name="firearm" value="pistol" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="pistol">revolver (close, 2 harm, loud)</label></td>
+        
+        <td class="tg-0pky" colspan="2"><input type="radio" id="rapier" name="firearm" value="rapier" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="rapier">rifle (far, 2 harm, loud)</label></td>
+      </tr>
+      
+        <tr>
+        <td class="tg-c3ow" colspan="4">Select two modifications</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky"><input type="checkbox" id="valuable" name="firearm" value="valuable" onclick="modSel(this.id, this.name)" autocomplete="off">
+        <label for="valuable">valuable</label></td>        
+        <td class="tg-0pky"><input type="checkbox" id="versatile" name="firearm" value="versatile" onclick="modSel(this.id, this.name)" autocomplete="off">
+        <label for="versatile">allow both close and far</label></td>
+        <td class="tg-0pky"><input type="checkbox" id="deadly" name="firearm" value="deadly" onclick="modSel(this.id, this.name)" autocomplete="off">
+        <label for="deadly">+1 harm</label></td>
+        <td class="tg-0pky"><input type="checkbox" id="silent" name="firearm" value="silent" onclick="modSel(this.id, this.name)" autocomplete="off">
+        <label for="silent">remove loud</label></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow" colspan="4"></td>
+      </tr>
+      
+      <tr>
+        <td class="tg-c3ow" colspan="4">Choose your hand weapon</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky" colspan="2"><input type="radio" id="pistol" name="handweapon" value="pistol" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="pistol">axe (1 harm, hand weapon)</label></td>
+        
+        <td class="tg-0pky" colspan="2"><input type="radio" id="rapier" name="handweapon" value="rapier" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="rapier">rapier (1 harm, hand weapon)</label></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow" colspan="4">Select two modifications</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky"><input type="checkbox" id="valuable" name="handweapon" value="valuable" onclick="modSel(this.id, this.name)" autocomplete="off">
+        <label for="pistol">valuable</label></td>        
+        <td class="tg-0pky"><input type="checkbox" id="flexible" name="handweapon" value="flexible" onclick="modSel(this.id, this.name)" autocomplete="off">
+        <label for="flexible">can be thrown</label></td>
+        <td class="tg-0pky"><input type="checkbox" id="deadly" name="handweapon" value="deadly" onclick="modSel(this.id, this.name)" autocomplete="off">
+        <label for="deadly">+1 harm</label></td>
+        <td class="tg-0pky"></td>
+      </tr>
+    </tbody>
+    </table>
+    <br>
+    <input type="submit" value="Next" onclick="submitFunc()" id="appearanceButton">
+    <br>
+    <p style="color:red" id="fireWarning"><b>You selected more than two Firearm modifications</b></p>
+    <p style="color:red" id="handWarning"><b>You selected more than two Hand Weapon modifications</b></p>
+   
+
+</p>
+
+<p id="processSec"></p>
+
+
 </body>
 
 <script>
 
 var section = 0;
-var sectionList = ["nameAppearanceSec", "statsSec", "bondsSec"];
-let attributesList = ['charName', 'gender', 'brains', 'brawn', 'beauty', 'balance', 'beyond', 'bondOne',
-                        'bondTwo', 'bondThree', 'bondFour'];
+var sectionList = ["descriptionSec", "nameAppearanceSec", "statsSec", "bondsSec", 'equipmentSec', 'processSec'];
                         
-let attributesDict = {'charName':'', 'gender':'', 'brains':0, 'brawn':+2, 'beauty':0, 'balance':0, 'beyond':0, 'bondOne':'',
-                        'bondTwo':'', 'bondThree':'', 'bondFour':'', 'health':4}
-let bondTestVar = "";
+let attributesDict = {'charName':'', 'gender':'', 'eyes':'', 'face':'', 'body':'', 'dress':'',
+                        'brains':0, 'brawn':2, 'beauty':0, 'balance':0, 'beyond':0, 'bondOne':'',
+                        'bondTwo':'', 'bondThree':'', 'bondFour':'', 'health':4,
+                        'specialMove':'<b>A True Professional</b><br>When you inflict terrible harm in combat, <b>ROLL+BRAWN</b><br>'+
+                        '<b>ON A 10+</b>: Choose 2<br>' +
+                        '<b>ON A 7-9</b>: Choose 1<br>'+
+                        'Your enemies retreat to a safe distance.<br>'+
+                        'Onlookers or enemies will tell stories of your prowess.<br>'+
+                        'Your enemies will want you for their own.<br>'+
+                        'Your enemies become afraid of you.<br>'+
+                        '<b>ON A MISS</b>: Choose 1 but the GM makes things worse anyway.',
+                        'equipment':'Brass whistle(loud)<br>'+
+                        'Armoured vest (2 armour)<br>' +
+                        'A Mercenary\'s wage (well off)'};
+
+let selFirearm = "";
+let selHandweapon = "";
+
+let selFireMod = ['','','',''];
+let selHandMod = ['','',''];
+
 
 function loadSite()
 {
-    //window.localStorage.clear();
     sectionList.forEach(function (item, index) {
-        if (item != "nameAppearanceSec")
+        if (item != "descriptionSec")
         {
             document.getElementById(item).style.display = "none";
         }
     });
     document.getElementById('statsWarning').style.display = "none";
+    document.getElementById('fireWarning').style.display = "none";
+    document.getElementById('handWarning').style.display = "none";
 
 }
 
 function submitFunc()
-{     
-    if (section >= sectionList.length - 1)
+{
+    if (sectionList[section] == 'processSec')
     {
+        console.log(sectionList[section]);
         section = sectionList.length - 1;
+        attributesDict['equipment'] = attributesDict['equipment'] + selFirearm;
+        
+        selFireMod.forEach(function (item, index) {
+            if (item != "")
+            {
+                attributesDict['equipment'] = attributesDict['equipment'] + item + ', ';
+            }
+        });
+        
+        attributesDict['equipment'] = attributesDict['equipment'] + ') ' + selHandweapon;
+        
+
+        selHandMod.forEach(function (item, index) {
+            if (item != "")
+            {
+                attributesDict['equipment'] = attributesDict['equipment'] + item + ', ';
+            }
+        });
+
+        attributesDict['equipment'] = attributesDict['equipment'] + ')';
+        
+        
         sendData();
+        
     }
     else if (sectionList[section] == 'statsSec')
     {
         let statsSum = attributesDict['brains'] + attributesDict['brawn'] + attributesDict['beauty'];
-        statsSum = statsSum + attributesDict['balance'] + attributesDict['beyond'];
-        
+        statsSum = statsSum + attributesDict['balance'] + attributesDict['beyond'];        
         if (statsSum == 3)
         {
+            
             document.getElementById('statsWarning').style.display = "none";
             document.getElementById(sectionList[section]).style.display = "none";
             section++;
@@ -126,6 +358,52 @@ function submitFunc()
             document.getElementById('statsWarning').style.display = "block";
         
     
+    }
+    else if (sectionList[section] == 'equipmentSec')
+    {
+        let fireModsSelected = 0;
+        let handModsSelected = 0;
+        selFireMod.forEach(function (item, index) {
+            if (item != "")
+            {
+                fireModsSelected++;
+            }
+        });
+        selHandMod.forEach(function (item, index) {
+            if (item != "")
+            {
+                handModsSelected++;
+            }
+        });
+        
+        console.log(fireModsSelected);
+        console.log(handModsSelected);
+        
+        if (fireModsSelected > 2 && handModsSelected > 2)
+        {
+            document.getElementById('fireWarning').style.display = "block";
+            document.getElementById('handWarning').style.display = "block";
+        }
+        else if (fireModsSelected <= 2 && handModsSelected > 2)
+        {
+            document.getElementById('fireWarning').style.display = "none";
+            document.getElementById('handWarning').style.display = "block";
+        }
+        else if (fireModsSelected > 2 && handModsSelected <= 2)
+        {
+            document.getElementById('fireWarning').style.display = "block";
+            document.getElementById('handWarning').style.display = "none";
+        }
+        else
+        {
+            document.getElementById('fireWarning').style.display = "none";
+            document.getElementById('handWarning').style.display = "none";
+            document.getElementById(sectionList[section]).style.display = "none";
+            section++;
+            document.getElementById(sectionList[section]).style.display = "block";
+            submitFunc();
+        }
+            
     }
     else
     {
@@ -139,10 +417,7 @@ function submitFunc()
 function sendData()
 {
     console.log("send");
-    attributesList.forEach(function (item, index) {
-        console.log(index);
-        console.log(attributesDict[item]);
-    });
+    console.log(attributesDict);
     
     
     console.log(attributesDict);
@@ -159,10 +434,19 @@ function sendData()
     // Create a state change callback 
     
     xhr.onreadystatechange = function () { 
-        if (xhr.readyState === 4 && xhr.status === 200)
-        { 
+        if (xhr.readyState === 4 && xhr.status === 200) { 
 
-            window.location.replace("characterEx?char=mercenary"); 
+            // Print received data from server 
+            //result.innerHTML = this.responseText;
+            //console.log(this.responseText);
+            if (this.responseText == 'ok')
+                window.location.replace("characterEx?char=mercenary");  
+                //console.log("asdfsdfds");
+            else if(this.responseText == 'bad')
+            {
+                alert('This character already exists, please pick a different one');
+                window.location.replace("/");  
+            }
 
         } 
     }; 
@@ -180,21 +464,128 @@ function extractText(text, id)
 {
     if (id == 'brains' || id == 'brawn' || id == 'beauty' || id == 'balance' || id == 'beyond')
         attributesDict[id] = parseInt(text);
+    else if (id == 'bondOne')
+        attributesDict[id] = '<b>' + text + '</b> reminds you of your child, you wish them to be safe.';
+    else if (id == 'bondTwo')
+        attributesDict[id] = '<b>' + text + '</b> out of trouble.';
+    else if (id == 'bondThree')
+        attributesDict[id] = '<b>' + text + '</b> has fought on your side before, you trust them implicitly.';
+    else if (id == 'bondFour')
+        attributesDict[id] = 'You think <b>' + text + '</b> is weak, so you bully them to get your way.';
     else
         attributesDict[id] = text;
+
 }
 
-function genderSel(gender)
+function appearanceSel(id, name)
 {
-    if(gender == 'male')
-        attributesDict['gender'] = "Male";
-    else if(gender == 'female')
-        attributesDict['gender'] = "Female";
-    else if(gender == 'nonbinary')
-        attributesDict['gender'] = "Nonbinary";
+    if (name == 'gender')
+        attributesDict['gender'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if (name == 'eyes')
+        attributesDict['eyes'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if (name == 'face')
+        attributesDict['face'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if (name == 'body')
+        attributesDict['body'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if (name == 'dress')
+    {
+        if (id == 'vest')
+            attributesDict['dress'] = 'Leather utility vest';
+        if (id == 'uniform')
+            attributesDict['dress'] = 'Foreign military uniform';
+        if (id == 'clothing')
+            attributesDict['dress'] = 'Light loose clothing';
+    }
+    else if (name == 'firearm')
+    {
+        console.log("equipment");
+        if (id == 'pistol')
+            //attributesDict['equipment'] = attributesDict['equipment'] + '<br>Pistol (close, 2 harm,loud)';
+            selFirearm = '<br>Revolver (close, 2 harm, loud, ';
+        if (id == 'rifle')
+            //attributesDict['equipment'] = attributesDict['equipment'] + '<br>Rapier (1 harm, hand weapon)';
+            selFirearm = '<br>rifle (far, 2 harm, loud, ';
+        //console.log(attributesDict['equipment']);
+    }
+    else if (name == 'handweapon')
+    {
+        //console.log("equipment");
+        if (id == 'pistol')
+            //attributesDict['equipment'] = attributesDict['equipment'] + '<br>Pistol (close, 2 harm,loud)';
+            selHandweapon = '<br>Axe (1 harm, hand weapon, ';
+        if (id == 'rifle')
+            //attributesDict['equipment'] = attributesDict['equipment'] + '<br>Rapier (1 harm, hand weapon)';
+            selHandweapon = '<br>Rapier (1 harm, hand weapon, ';
+        //console.log(attributesDict['equipment']);
+    }
     else
-        console.log("all good");
+        console.log("appearance went wrong");
     
+}
+
+function modSel(id, name)
+{
+
+    if (name == 'firearm')
+    {
+        //console.log("equipment");
+        if (id == 'valuable')
+        {
+            if (selFireMod[0] == "")
+                selFireMod[0] = id;
+            else
+                selFireMod[0] = "";
+        }
+        if (id == 'versatile')
+        {
+            if(selFireMod[1] == "")
+                selFireMod[1] = 'allow both close and far';
+            else
+                selFireMod[1] = "";
+        }
+        if (id == 'deadly')
+        {
+            if (selFireMod[2] == "")
+                selFireMod[2] = '+1 harm';
+            else
+                selFireMod[2] == "";
+        }
+        if (id == 'silent')
+        {   
+            if (selFireMod[3] == "")
+                selFireMod[3] = 'remove loud';
+            else
+                selFireMod[3] = "";
+        }
+        //console.log(attributesDict['equipment']);
+    }
+    else if (name == 'handweapon')
+    {
+        //console.log("equipment");
+        if (id == 'valuable')
+        {
+            if (selHandMod[0] == "")
+                selHandMod[0] = id;
+            else
+                selHandMod[0] = "";
+        }
+        if (id == 'flexible')
+        {
+            if(selHandMod[1] == "")
+                selHandMod[1] = 'can be thrown';
+            else
+                selHandMod[1] = "";
+        }
+        if (id == 'deadly')
+        {
+            if (selHandMod[2] == "")
+                selHandMod[2] = '+1 harm';
+            else
+                selHandMod[2] == "";
+        }
+        //console.log(attributesDict['equipment']);
+    }
+
 }
 
 </script>

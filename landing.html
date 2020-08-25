@@ -104,11 +104,23 @@ function loadLinks()
     let char_block = "";
 
     xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) { 
+        if (xhr.readyState === 4 && xhr.status === 200)
+        { 
             char_block = this.responseText;
             listSplit = char_block.split(",");
-            listSplit.forEach(function (item, index) {
-                document.getElementById(item + "_ex").style.display = "block";
+            listSplit.forEach(function (item, index)
+            {
+            
+                if(document.getElementById(item + "_ex"))
+                {
+                    document.getElementById(item + "_ex").style.display = "block";
+                }
+                else
+                {
+                    //alert('Element does not exist!');
+                }
+                    
+                //document.getElementById(item + "_ex").style.display = "block";
                 document.getElementById(item + "_new").style.display = "none";
                 document.getElementById(item + "_ex_text").style.display = "none";
                 document.getElementById(item + "_new_text").style.display = "block";

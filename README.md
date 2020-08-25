@@ -48,22 +48,28 @@ Version progression:
             3. Bonds
                 Simple fields as an entry
             4. Special move info
-            5. Equipment info
+            5. Equipment info        
+        3. Prevent new character overwrite                  DONE
+            When two people are making the same character, the one who finishes first gets it
             
-    Version 0.7
-        1. Add a link to basic moves
-            This might be as an option on a character sheet and it would be hide and display
-        2. Prevent from replacing character saves in case two people create the same char at the same time
-        
-    
+
     Version 1.0     
-        1. Finish all the characters
+        1. Finish all the characters                        DONE
+        2. Add equipment selection                          DONE
+            Merc, Boatswain, Merchant, Scholar, Surgeon
+        3. Add the character description                    DONE
+        4. Fix else if in appearanceSel()                   DONE
             
             
     Version 1.5
         1. Create tales??? 
+        2. Make sure that every field is filled
         
         
     Version X
+        1. Add a link to basic moves
+            This might be as an option on a character sheet and it would be hide and display
+            Debatable to have this as a feature do to the sheer amount of moves
+            Moves just look better on a piece of paper or a big screen
         2. Add town sheet
         3. Edit a character

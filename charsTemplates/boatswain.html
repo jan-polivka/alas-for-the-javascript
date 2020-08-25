@@ -1,0 +1,397 @@
+<body onload="loadSite()">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<a href="/">Go Home</a><br>
+
+<p id ="descriptionSec">
+    
+    <b>Boatswain</b>
+    <br>
+    The  daily  work  holding  this  ship  together  doesn't  just  get  done  by  itself. 
+    It  gets  done  because  you  make  the  lazy  idlers  you  grudgingly  call  your  crew  do it.
+    You see it like this: the Captain is like God – rarely present and issuing vague commands.
+    This makes you like the king – in control of everything that happens in your domain.
+    The best part of your week is when you get to decide who is on chamber pot duty
+    <br>
+    <br>
+    
+    
+    <b>specialMove</b>
+    <br>
+    <b>Your Crew</b>
+    <br>
+    When you try and impose your will on your crew, <b>ROLL+BEAUTY</b><br>
+    <b>ON A 10+</b>: All 3.<br>
+    <b>ON A 7-9</b>: Choose 1.<br>
+    They do what you want.<br>
+    They don't fight back over it.<br>
+    They don't make mistakes.<br>
+    <b>ON A MISS</b>: The GM makes things worse
+    <br>
+    
+    <input type="submit" value="Next" onclick="submitFunc()" id="appearanceButton">
+    
+</p>
+
+
+<p id="nameAppearanceSec">
+
+     
+
+    <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+    </style>
+    <table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-c3ow">Name</th>
+        <th class="tg-c3ow" colspan="4"><input type="text" id="charName" name="charName" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"><br></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-c3ow" colspan="5">Appearance</td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Gender</td>
+        <td class="tg-0pky"><input type="radio" id="male" name="gender" value="male" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="male">Male</label></td>
+        <td class="tg-0pky"><input type="radio" id="female" name="gender" value="female" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="female">Female</label></td>
+        <td class="tg-0pky"><input type="radio" id="nonbinary" name="gender" value="nonbinary" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="nonbinary">Nonbinary</label></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Eyes</td>
+        <td class="tg-0pky"><input type="radio" id="hard" name="eyes" value="hard" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="hard">Hard</label></td>
+        <td class="tg-0pky"><input type="radio" id="quick" name="eyes" value="quick" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="quick">Quick</label></td>
+        <td class="tg-0pky"><input type="radio" id="disdainful" name="eyes" value="disdainful" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="disdainful">Disdainful</label></td>
+        <td class="tg-0pky"><input type="radio" id="clear" name="eyes" value="clear" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="clear">Clear</label></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Face</td>
+        <td class="tg-0pky"><input type="radio" id="distinguished" name="face" value="distinguished" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="distinguished">Distinguished</label></td>
+        <td class="tg-0pky"><input type="radio" id="long" name="face" value="long" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="long">Long</label></td>
+        <td class="tg-0pky"><input type="radio" id="expressive" name="face" value="expressive" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="expressive">Expressive</label></td>
+        <td class="tg-0pky"><input type="radio" id="beautiful" name="face" value="beautiful" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="beautiful">Beautiful</label></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Body</td>
+        <td class="tg-0pky"><input type="radio" id="muscled" name="body" value="muscled" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="muscled">Muscled</label></td>
+        <td class="tg-0pky"><input type="radio" id="tall" name="body" value="tall" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="tall">Tall</label></td>
+        <td class="tg-0pky"><input type="radio" id="graceful" name="body" value="graceful" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="graceful">Graceful</label></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-c3ow">Dress</td>
+        <td class="tg-0pky"><input type="radio" id="garb" name="dress" value="garb" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="garb">Versatile sailor's garb</label></td>
+        <td class="tg-0pky"><input type="radio" id="coat" name="dress" value="coat" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="coat">Ellegant frilled coat</label></td>
+        <td class="tg-0pky"><input type="radio" id="breeches" name="dress" value="breeches" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="breeches">Breeches but no shirt</label></td>
+        <td class="tg-0pky"></td>
+      </tr>
+    </tbody>
+    </table>
+    <br>
+    <input type="submit" value="Next" onclick="submitFunc()" id="appearanceButton">
+   
+
+</p>
+
+<p id="statsSec">
+        
+    <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-wp8o{border-color:#000000;text-align:center;vertical-align:top}
+    </style>
+    <table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-wp8o" colspan="2">Stats</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-wp8o">Brains</td>
+        <td class="tg-wp8o">
+        <input type="text" id="brains" name="brains" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+      </tr>
+      <tr>
+        <td class="tg-wp8o">Brawn</td>
+        <td class="tg-wp8o">
+    <input type="text" id="brawn" name="brawn" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+      </tr>
+      <tr>
+        <td class="tg-wp8o">Beauty</td>
+        <td class="tg-wp8o">+2</td>
+      </tr>
+      <tr>
+        <td class="tg-wp8o">Balance</td>        
+        <td class="tg-wp8o">
+        <input type="text" id="balance" name="balance" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+      </tr>
+      <tr>
+        <td class="tg-wp8o">Beyond</td>
+        <td class="tg-wp8o">
+        <input type="text" id="beyond" name="beyond" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+      </tr>
+    </tbody>
+    </table>
+    <br>
+    
+    
+    <input type="submit" value="Next" onclick="submitFunc()" id="statsButton">
+    <p style="color:red" id="statsWarning"><b>You did not allocate properly</b></p>
+    
+</p>
+
+<p id="bondsSec">
+        Bonds
+        <br>
+        <br>
+        You're better than 
+        <input type="text" id="bondOne" name="bondOne" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> and you want them to know it.
+        <br>
+        <br>
+        You always seem to bailing 
+        <input type="text" id="bondTwo" name="bondTwo" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> out of trouble.
+        <br>
+        <br>
+        You're soft on 
+        <input type="text" id="bondThree" name="bondThree" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> and always give them easy work.
+        <br>
+        <br>
+        <input type="text" id="bondFour" name="bondFour" autocomplete="off" onkeyup="extractText(this.value, this.id)"> knows their way around the ship,
+        so you respect their abilities.
+        <br>
+        <br>
+        <input type="submit" value="Next" onclick="submitFunc()" id="bondsButton">
+        
+        
+        
+</p>
+
+<p id="equipmentSec">
+
+     
+
+    <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+    </style>
+    <table class="tg">
+    <tbody>
+      <tr>
+        <td class="tg-c3ow" colspan="2">Choose your weapon</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky"><input type="radio" id="pistol" name="equipment" value="pistol" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="pistol">Pistol (close, 2 harm,loud)</label></td>
+        
+        <td class="tg-0pky"><input type="radio" id="rapier" name="equipment" value="rapier" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="rapier">Rapier (1 harm, hand weapon)</label></td>
+      </tr>
+    </tbody>
+    </table>
+    <br>
+    <input type="submit" value="Next" onclick="submitFunc()" id="appearanceButton">
+   
+
+</p>
+
+
+
+</body>
+
+<script>
+
+var section = 0;
+var sectionList = ["descriptionSec", "nameAppearanceSec", "statsSec", "bondsSec", "equipmentSec"];
+                        
+let attributesDict = {'charName':'', 'gender':'', 'eyes':'', 'face':'', 'body':'', 'dress':'',
+                        'brains':0, 'brawn':0, 'beauty':2, 'balance':0, 'beyond':0, 'bondOne':'',
+                        'bondTwo':'', 'bondThree':'', 'bondFour':'', 'health':4,
+                        'specialMove':'<b>Your Crew</b><br>When you try and impose your will on your crew, <b>ROLL+BEAUTY</b><br>'+
+                        '<b>ON A 10+</b>: All 3.<br>' +
+                        '<b>ON A 7-9</b>: Choose 1.<br>'+
+                        'They do what you want.<br>'+
+                        'They don\'t fight back over it.<br>'+
+                        'They don\'t make mistakes.<br>'+
+                        '<b>ON A MISS</b>: The GM makes things worse',
+                        'equipment':'Brass whistle(loud)<br>'+
+                        'Leather Jerkin (1 armour)<br>' +
+                        'A Boatswain\'s wage (well off)'};
+                        
+let selWeapon = "";
+
+function loadSite()
+{
+    window.localStorage.clear();
+    sectionList.forEach(function (item, index) {
+        if (item != "descriptionSec")
+        {
+            document.getElementById(item).style.display = "none";
+        }
+    });
+    document.getElementById('statsWarning').style.display = "none";
+
+}
+
+function submitFunc()
+{     
+    if (section >= sectionList.length - 1)
+    {
+        section = sectionList.length - 1;
+        attributesDict['equipment'] = attributesDict['equipment'] + selWeapon;
+        sendData();
+        
+    }
+    else if (sectionList[section] == 'statsSec')
+    {
+        let statsSum = attributesDict['brains'] + attributesDict['brawn'] + attributesDict['beauty'];
+        statsSum = statsSum + attributesDict['balance'] + attributesDict['beyond'];
+        
+        if (statsSum == 3)
+        {
+            document.getElementById('statsWarning').style.display = "none";
+            document.getElementById(sectionList[section]).style.display = "none";
+            section++;
+            document.getElementById(sectionList[section]).style.display = "block";
+        }
+        else
+            document.getElementById('statsWarning').style.display = "block";
+        
+    
+    }
+    else
+    {
+        document.getElementById(sectionList[section]).style.display = "none";
+        section++;
+        document.getElementById(sectionList[section]).style.display = "block";
+    }
+    
+}
+
+function sendData()
+{
+    console.log("send");
+    console.log(attributesDict);
+    
+    
+    console.log(attributesDict);
+    
+    let xhr = new XMLHttpRequest(); 
+    let url = "characterSave?char=boatswain";
+
+    // open a connection 
+    xhr.open("POST", url, true); 
+
+    // Set the request header i.e. which type of content you are sending 
+    xhr.setRequestHeader("Content-Type", "application/json"); 
+
+    // Create a state change callback 
+    
+    xhr.onreadystatechange = function () { 
+        if (xhr.readyState === 4 && xhr.status === 200) { 
+
+            // Print received data from server 
+            //result.innerHTML = this.responseText;
+            //console.log(this.responseText);
+            if (this.responseText == 'ok')
+                window.location.replace("characterEx?char=boatswain");            
+            else if(this.responseText == 'bad')
+            {
+                alert('This character already exists, please pick a different one');
+                window.location.replace("/");  
+            }
+
+        } 
+    }; 
+
+    console.log(attributesDict);
+    // Converting JSON data to string 
+    var data = JSON.stringify(attributesDict); 
+
+    // Sending data with the request 
+    xhr.send(data);
+    
+}
+
+function extractText(text, id)
+{
+    if (id == 'brains' || id == 'brawn' || id == 'beauty' || id == 'balance' || id == 'beyond')
+        attributesDict[id] = parseInt(text);
+    else if (id == 'bondOne')
+        attributesDict[id] = 'You\'re better than <b>' + text + '</b> and you want them to know it.';
+    else if (id == 'bondTwo')
+        attributesDict[id] = 'You always seem to bailing <b>' + text + '</b> out of trouble.';
+    else if (id == 'bondThree')
+        attributesDict[id] = 'You\'re soft on <b>' + text + '</b> and always give them easy work.';
+    else if (id == 'bondFour')
+        attributesDict[id] = '<b>' + text + '</b> knows their way around the ship, so you respect their abilities.';
+    else
+        attributesDict[id] = text;
+}
+
+function appearanceSel(id, name)
+{
+    if (name == 'gender')
+        attributesDict['gender'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if (name == 'eyes')
+        attributesDict['eyes'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if (name == 'face')
+        attributesDict['face'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if (name == 'body')
+        attributesDict['body'] = id.charAt(0).toUpperCase() + id.slice(1);
+    else if (name == 'dress')
+    {
+        if (id == 'garb')
+            attributesDict['dress'] = 'Versatile sailor\'s garb';
+        if (id == 'coat')
+            attributesDict['dress'] = 'Ellegant frilled coat';
+        if (id == 'breeches')
+            attributesDict['dress'] = 'Breeches but no shirt';
+    }
+    else if (name == 'equipment')
+    {
+        //console.log("equipment");
+        if (id == 'pistol')
+            //attributesDict['equipment'] = attributesDict['equipment'] + '<br>Pistol (close, 2 harm,loud)';
+            selWeapon = '<br>Pistol (close, 2 harm,loud)';
+        if (id == 'rapier')
+            //attributesDict['equipment'] = attributesDict['equipment'] + '<br>Rapier (1 harm, hand weapon)';
+            selWeapon = '<br>Rapier (1 harm, hand weapon)';
+        //console.log(attributesDict['equipment']);
+    }
+    else
+        console.log("appearance went wrong");
+    
+}
+
+</script>

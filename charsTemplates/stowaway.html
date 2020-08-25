@@ -5,27 +5,26 @@
 
 <p id ="descriptionSec">
     
-    <b>Captain</b>
+    <b>Stowaway</b>
     <br>
-    It is a truth known throughout the ages that the Captain always goes down with  the  ship.
-    Usually  this  means  physically,  but  in  the  rare  instances  you  don't  sink,
-    your  reputation  and  finances  will   This  ship  is  your  life,  your  livelihood  and  your  home.
-    As  for  the  crew,  you've  come  to  view  them  as  an  odd  combination  of  family,
-    and  human  workhorses  in  need  of  firm,  but  skilled, handling.
+    You've got no idea where you're going, and even less where you'll end up – but you  don't  care.
+    Wherever  it  is,  it  has  got  to  be  better  than  the  hellhole  you  came from. 
+    You're leaving, and your only regret is that you didn't do it sooner. It's time to make your own way in this world.
+    To live your life the way you choose. And nothing, not hell or high water, will ever, ever, make you go back.
+    <br>
+    <br>
     
-    <br>
-    
-    
-    <br>
-    <b>My Reputation Preceeds Me</b>
-    <br>
-    When you meet someone important, <b>ROLL+BALANCE</b>
-    <br>
-    <b>ON A SUCCESS</b>: They've heard of you, and you say what they've heard.<br>
-    <b>ON A 10+</b>: You take +1 forward when dealing with them.<br>
-    <b>ON A MISS</b>: They've heard of you, but GM will decide what
+    <b>Never Be Found</b>
+    <br>When you dirty your hands to get things done, <b>ROLL+BRAWN</b><br>
+    <b>ON A 10+</b>: All 3<br>
+    <b>ON A 7-9</b>: Choose 2<br>
+    You leave nothing at the scene.<br>
+    There are no whispers or rumours about your involvement.<br>
+    You see, hear or find something of interest.<br>
+    <b>ON A MISS</b>: You're caught red handed by someone who trusts you.
     
     
+    <br>
     <br>
     <input type="submit" value="Next" onclick="submitFunc()" id="appearanceButton">
     
@@ -66,45 +65,43 @@
       </tr>
       <tr>
         <td class="tg-c3ow">Eyes</td>
-        <td class="tg-0pky"><input type="radio" id="focused" name="eyes" value="focused" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
-        <label for="focused">Focused</label></td>
-        <td class="tg-0pky"><input type="radio" id="cold" name="eyes" value="cold" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
-        <label for="cold">Cold</label></td>
-        <td class="tg-0pky"><input type="radio" id="alluring" name="eyes" value="alluring" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
-        <label for="alluring">Alluring</label></td>
-        <td class="tg-0pky"><input type="radio" id="honest" name="eyes" value="honest" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
-        <label for="honest">Honest</label><br></td>
+        <td class="tg-0pky"><input type="radio" id="haunted" name="eyes" value="haunted" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="haunted">haunted</label></td>
+        <td class="tg-0pky"><input type="radio" id="nervous" name="eyes" value="nervous" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="nervous">nervous</label></td>
+        <td class="tg-0pky"><input type="radio" id="forceful" name="eyes" value="forceful" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="forceful">forceful</label></td>
+        <td class="tg-0pky"><input type="radio" id="eager" name="eyes" value="eager" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="eager">eager</label></td>
       </tr>
       <tr>
         <td class="tg-c3ow">Face</td>
-        <td class="tg-0pky"><input type="radio" id="open" name="face" value="open" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
-        <label for="open">Open</label></td>
-        <td class="tg-0pky"><input type="radio" id="tense" name="face" value="tense" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
-        <label for="tense">Tense</label></td>
-        <td class="tg-0pky"><input type="radio" id="bony" name="face" value="bony" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
-        <label for="bony">Bony</label></td>
-        <td class="tg-0pky"><input type="radio" id="baby" name="face" value="baby" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
-        <label for="baby">Baby</label><br></td>
+        <td class="tg-0pky"><input type="radio" id="brave" name="face" value="brave" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="brave">brave</label></td>
+        <td class="tg-0pky"><input type="radio" id="wild" name="face" value="wild" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="wild">wild</label></td>
+        <td class="tg-0pky"><input type="radio" id="sunken" name="face" value="sunken" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="sunken">sunken</label></td>
+        <td class="tg-0pky"><input type="radio" id="sullen" name="face" value="sullen" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="sullen">sullen</label></td>
       </tr>
       <tr>
         <td class="tg-c3ow">Body</td>
-        <td class="tg-0pky"><input type="radio" id="thin" name="body" value="thin" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
-        <label for="thin">Thin</label></td>
-        <td class="tg-0pky"><input type="radio" id="built" name="body" value="built" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
-        <label for="built">Built</label></td>
-        <td class="tg-0pky"><input type="radio" id="fat" name="body" value="fat"  onclick="appearanceSel(this.id, this.name)" autocomplete="off">
-        <label for="fat">Fat</label></td>
-        <td class="tg-0pky"><br></td>
+        <td class="tg-0pky"><input type="radio" id="sickly" name="body" value="sickly" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="sickly">sickly</label></td>
+        <td class="tg-0pky"><input type="radio" id="young" name="body" value="young" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="young">young</label></td>
+        <td class="tg-0pky"><input type="radio" id="gentle" name="body" value="gentle" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="gentle">gentle</label></td>
       </tr>
       <tr>
         <td class="tg-c3ow">Dress</td>
-        <td class="tg-0pky"><input type="radio" id="uniform" name="dress" value="uniform" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
-        <label for="uniform">Immaculate naval uniform</label></td>
-        <td class="tg-0pky"><input type="radio" id="coat" name="dress" value="coat"  onclick="appearanceSel(this.id, this.name)" autocomplete="off">
-        <label for="coat">Loose swashbuckler coat</label></td>
-        <td class="tg-0pky"><input type="radio" id="vest" name="dress" value="vest" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
-        <label for="vest">Plain vest</label>  </td>
-        <td class="tg-0pky"><br></td>
+        <td class="tg-0pky"><input type="radio" id="cloak" name="dress" value="cloak" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="cloak">hooded cloak</label></td>
+        <td class="tg-0pky"><input type="radio" id="outfit" name="dress" value="outfit" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="outfit">oversized sailor's outfit</label></td>
+        <td class="tg-0pky"><input type="radio" id="silks" name="dress" value="silks" onclick="appearanceSel(this.id, this.name)" autocomplete="off">
+        <label for="silks">finely made silks</label></td>
       </tr>
     </tbody>
     </table>
@@ -132,28 +129,34 @@
       <tr>
         <th class="tg-wp8o" colspan="2">Stats</th>
       </tr>
+      <tr>
+        <th class="tg-wp8o" colspan="2">Allocate: 2,0,0,-1</th>
+      </tr>
     </thead>
     <tbody>
       <tr>
         <td class="tg-wp8o">Brains</td>
-        <td class="tg-wp8o">
-        <input type="text" id="brains" name="brains" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+        <!-- <td class="tg-wp8o">+2</td> -->
+        <td class="tg-wp8o"><input type="text" id="brains" name="brains" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
       </tr>
       <tr>
         <td class="tg-wp8o">Brawn</td>
-        <td class="tg-wp8o">
-    <input type="text" id="brawn" name="brawn" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
+        <!-- <td class="tg-wp8o">+2</td> -->
+        <td class="tg-wp8o"><input type="text" id="brawn" name="brawn" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
       </tr>
       <tr>
         <td class="tg-wp8o">Beauty</td>
+        <!-- <td class="tg-wp8o">+2</td> -->
         <td class="tg-wp8o"><input type="text" id="beauty" name="beauty" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
       </tr>
       <tr>
-        <td class="tg-wp8o">Balance</td>
-        <td class="tg-wp8o">+2</td>
+        <td class="tg-wp8o">Balance</td>   
+        <td class="tg-wp8o">+2</td>        
+        <!-- <td class="tg-wp8o"><input type="text" id="balance" name="balance" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td> -->
       </tr>
       <tr>
         <td class="tg-wp8o">Beyond</td>
+        <!-- <td class="tg-wp8o">+2</td> -->
         <td class="tg-wp8o"><input type="text" id="beyond" name="beyond" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"></td>
       </tr>
     </tbody>
@@ -169,22 +172,22 @@
 <p id="bondsSec">
         Bonds
         <br>
-        <br>
-        <input type="text" id="bondOne" name="bondOne" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> once stood up to you and
-refused to obey a direct order
-        <br>
-        <br>
-        You've got your eye on
-        <input type="text" id="bondTwo" name="bondTwo" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> for
-        first mate, whether or not they agree
+        <br>    
+        <input type="text" id="bondOne" name="bondOne" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> promised to help you escape from your old
+        life. They’re the only one that knew you snuck aboard.
         <br>
         <br>
-        <input type="text" id="bondThree" name="bondThree" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> owes you for giving them a
-        second chance after their gaol sentence.
+        You've heard much about 
+        <input type="text" id="bondTwo" name="bondTwo" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> and dream of learning from them.
+        <br>
+        <br> 
+        You're worried 
+        <input type="text" id="bondThree" name="bondThree" value="" autocomplete="off" onkeyup="extractText(this.value, this.id)"> plans to send you back where you
+        came from.
         <br>
         <br>
-        <input type="text" id="bondFour" name="bondFour" autocomplete="off" onkeyup="extractText(this.value, this.id)"> is the only one on board to
-        have seen your private quarters
+        <input type="text" id="bondFour" name="bondFour" autocomplete="off" onkeyup="extractText(this.value, this.id)"> is convinced you're up to no good
+        and is trying their best to prove it.
         <br>
         <br>
         <input type="submit" value="Next" onclick="submitFunc()" id="bondsButton">
@@ -199,23 +202,24 @@ refused to obey a direct order
 <script>
 
 var section = 0;
-var sectionList = ["descriptionSec","nameAppearanceSec", "statsSec", "bondsSec"];
+var sectionList = ['descriptionSec',"nameAppearanceSec", "statsSec", "bondsSec"];
                         
 let attributesDict = {'charName':'', 'gender':'', 'eyes':'', 'face':'', 'body':'', 'dress':'',
-                        'brains':0, 'brawn':0, 'beauty':0, 'balance':+2, 'beyond':0, 'bondOne':'',
+                        'brains':0, 'brawn':0, 'beauty':0, 'balance':2, 'beyond':0, 'bondOne':'',
                         'bondTwo':'', 'bondThree':'', 'bondFour':'', 'health':4,
-                        'specialMove':'<b>My Reputation Preceeds Me</b><br>When you meet someone important, <b>ROLL+BALANCE</b>'+
-                        '<br><b>ON A SUCCESS</b>: They\'ve heard of you, and you say what they\'ve heard.<br>'+
-                        '<b>ON A 10+</b>: You take +1 forward when dealing with them.<br>' +
-                        '<b>ON A MISS</b>: They\'ve heard of you, but GM will decide what.',
-                        'equipment':'Compass<br>'+
-                        'An ornate sword (1 harm, valuable, hand weapon)<br>' + 
-                        'Captain\'s Regalia (1 armour)<br>' +
-                        'A Captain\'s wage (well off)'};
+                        'specialMove':'<b>Never Be Found</b><br>When you dirty your hands to get things done, <b>ROLL+BRAWN</b><br>'+
+                        '<b>ON A 10+</b>: All 3<br>' +
+                        '<b>ON A 7-9</b>: Choose 2<br>'+
+                        'You leave nothing at the scene.<br>'+
+                        'There are no whispers or rumours about your involvement.<br>'+
+                        'You see, hear or find something of interest.<br>'+
+                        '<b>ON A MISS</b>: You\'re caught red handed by someone who trusts you.',
+                        'equipment':'A sharpened blade (1 harm, hand weapon)<br>'+
+                        'An ornate, rare, or beautiful keepsake from your home<br>' + 
+                        'Enough money for a week of food and lodgings<br>'};
 
 function loadSite()
 {
-    window.localStorage.clear();
     sectionList.forEach(function (item, index) {
         if (item != "descriptionSec")
         {
@@ -237,10 +241,10 @@ function submitFunc()
     else if (sectionList[section] == 'statsSec')
     {
         let statsSum = attributesDict['brains'] + attributesDict['brawn'] + attributesDict['beauty'];
-        statsSum = statsSum + attributesDict['balance'] + attributesDict['beyond'];
-        
+        statsSum = statsSum + attributesDict['balance'] + attributesDict['beyond'];        
         if (statsSum == 3)
         {
+            
             document.getElementById('statsWarning').style.display = "none";
             document.getElementById(sectionList[section]).style.display = "none";
             section++;
@@ -269,7 +273,7 @@ function sendData()
     console.log(attributesDict);
     
     let xhr = new XMLHttpRequest(); 
-    let url = "characterSave?char=captain";
+    let url = "characterSave?char=stowaway";
 
     // open a connection 
     xhr.open("POST", url, true); 
@@ -286,7 +290,7 @@ function sendData()
             //result.innerHTML = this.responseText;
             //console.log(this.responseText);
             if (this.responseText == 'ok')
-                window.location.replace("characterEx?char=captain");            
+                window.location.replace("characterEx?char=stowaway");            
             else if(this.responseText == 'bad')
             {
                 alert('This character already exists, please pick a different one');
@@ -310,18 +314,19 @@ function extractText(text, id)
     if (id == 'brains' || id == 'brawn' || id == 'beauty' || id == 'balance' || id == 'beyond')
         attributesDict[id] = parseInt(text);
     else if (id == 'bondOne')
-        attributesDict[id] = '<b>' + text + '</b> once stood up to you and refused to obey a direct order';
+        attributesDict[id] = '<b>' + text + '</b>promised to help you escape from your old life. They’re the only one that knew you snuck aboard.';
     else if (id == 'bondTwo')
-        attributesDict[id] = 'You\'ve got your eye on <b>' + text + '</b> for first mate, whether or not they agree';
+        attributesDict[id] = 'You\'ve heard much about <b>' + text + '</b> and dream of learning from them.';
     else if (id == 'bondThree')
-        attributesDict[id] = '<b>' + text + '</b> owes you for giving them a second chance after their gaol sentence.';
+        attributesDict[id] = 'You\'re worried  <b>' + text + '</b> plans to send you back where you came from.';
     else if (id == 'bondFour')
-        attributesDict[id] = '<b>' + text + '</b> is the only one on board to have seen your private quarters';
+        attributesDict[id] = 'When your temper gets the best of you, <b>' + text + '</b> is convinced you\'re up to no good and is trying their best to prove it.';
     else
         attributesDict[id] = text;
+
 }
 
-function appearanceSel(id)
+function appearanceSel(id, name)
 {
     if (name == 'gender')
         attributesDict['gender'] = id.charAt(0).toUpperCase() + id.slice(1);
@@ -333,12 +338,12 @@ function appearanceSel(id)
         attributesDict['body'] = id.charAt(0).toUpperCase() + id.slice(1);
     else if (name == 'dress')
     {
-        if (id == 'vest')
-            attributesDict['dress'] = 'Plain vest';
-        if (id == 'uniform')
-            attributesDict['dress'] = 'Immaculate naval uniform';
-        if (id == 'coat')
-            attributesDict['dress'] = 'Loose swashbuckler coat';
+        if (id == 'cloak')
+            attributesDict['dress'] = 'hooded cloak';
+        if (id == 'oversized')
+            attributesDict['dress'] = 'oversized sailor\'s outfit';
+        if (id == 'outfit')
+            attributesDict['dress'] = 'finely made silks';
     }
     else
         console.log("appearance went wrong");
